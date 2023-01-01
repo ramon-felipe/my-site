@@ -3,8 +3,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem;
+  padding: 2rem;
   min-height: 100vh;
+  background-color: whitesmoke;
 }
 
 .description {
@@ -70,6 +71,24 @@
   font-size: 0.9rem;
   line-height: 1.5;
   max-width: 30ch;
+}
+
+.right,
+.work_desc_pipe {
+  display: flex;
+  justify-content: right;
+}
+
+.work_desc_pipe div {
+  vertical-align: middle;
+  align-items: center;
+  height:100%;
+  min-height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grip-vertical" viewBox="0 0 16 16"><path d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>');
+}
+
+.right i {
+  padding-top: 1rem;
 }
 
 .center {
