@@ -3,7 +3,7 @@ import styles from '../../styles/Home.module.css'
 
 const SkillsSection = (): JSX.Element => {
     return (
-        <Row >
+        <Row className={styles.section} >
             <Col className={styles.center}>
                 <h2>DIGITAL SKILLS</h2>
             </Col>

@@ -9,7 +9,7 @@ const EducationSection = (): JSX.Element => {
     const educationExperiences: IEducationExperienceModel[] = educationExperienceData;
 
     return (
-        <Row >
+        <Row className={styles.section} >
             <Col className={styles.center}>
                 <h2>EDUCATION AND TRAINING</h2>
             </Col>            
@@ -22,7 +22,9 @@ const EducationSection = (): JSX.Element => {
                     )
                 )
             }
-            <hr/>
+            <Row className='mt-4'>
+                <hr/>
+            </Row>
         </Row>
     )
 }

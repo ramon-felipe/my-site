@@ -7,7 +7,7 @@ const PersonalSection = (): JSX.Element => {
     const imageRef = useRef(null);
 
     return (
-        <Row >
+        <Row className={styles.section} >
             <Row>
                 <Col className={styles.center}>                  
                     <Image 
@@ -40,7 +40,9 @@ const PersonalSection = (): JSX.Element => {
                     <i className="bi bi-envelope-at-fill pe-2 " style={{fontSize: '2rem', color: 'cornflowerblue'}}></i><span><b>EMAIL: </b>ramon.felipe@hotmail.com</span>
                 </Col>
             </Row>
-            <hr/>
+            <Row className='mt-4'>
+                <hr/>
+            </Row>
         </Row>
     )
 }
