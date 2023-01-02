@@ -8,7 +8,7 @@ const WorkExperienceSection = (): JSX.Element => {
     const workingExperiences: IWorkExperienceModel[] = workingExperienceData;
 
     return (
-        <Row >
+        <Row className={styles.section} >
             <Col className={styles.center}>
                 <h2>WORK EXPERIENCE</h2>
             </Col>
@@ -21,7 +21,9 @@ const WorkExperienceSection = (): JSX.Element => {
                     )
                 )
             }
-            <hr/>
+            <Row className='mt-4'>
+                <hr/>
+            </Row>
         </Row>
     )
 }
