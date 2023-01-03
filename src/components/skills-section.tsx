@@ -4,9 +4,9 @@ import styles from '../../styles/Home.module.css'
 const SkillsSection = (): JSX.Element => {
     return (
         <Row className={styles.section} >
-            <Col className={styles.center}>
-                <h2>DIGITAL SKILLS</h2>
-            </Col>
+            <Row className={styles.center}>
+                <h2 className={styles.center}>DIGITAL SKILLS</h2>
+            </Row>
             <hr/>
         </Row>
     )

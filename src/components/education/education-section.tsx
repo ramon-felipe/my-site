@@ -9,23 +9,23 @@ const EducationSection = (): JSX.Element => {
     const educationExperiences: IEducationExperienceModel[] = educationExperienceData;
 
     return (
-        <Row className={styles.section} >
-            <Col className={styles.center}>
-                <h2>EDUCATION AND TRAINING</h2>
-            </Col>            
+        <div className={styles.section} >
+            <div>
+                <h2 className={styles.center}>EDUCATION AND TRAINING</h2>
+            </div>            
             {
                 educationExperiences.map((e, index) =>                    
                     (
-                        <Row key={index}>
+                        <div key={index}>
                             <EducationExperience {...e}/>
-                        </Row>
+                        </div>
                     )
                 )
             }
-            <Row className='mt-4'>
+            <div className='mt-4'>
                 <hr/>
-            </Row>
-        </Row>
+            </div>
+        </div>
     )
 }
 
