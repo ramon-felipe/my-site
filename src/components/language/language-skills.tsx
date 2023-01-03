@@ -18,30 +18,15 @@ const LanguageSkills = (props: ILanguageSkillsModel) => {
         nameof<ILanguageSkillRateModel>(skillName).replace('Rate', '')
 
     return (
-        <>
-            {
-                motherTongue && 
-                <div className='py-2'>
-                    Mother Tongue:
-                    <div>
-                        <h3>{languageName}</h3>
-                    </div>
-                </div>
-            }
-            {
-                !motherTongue &&
-                <div className='py-2'>
-                    Other Languages:
-                    <Row>
-                        <h3>{languageName}</h3>
-                        <LanguageSkillRate skillName={ getSkillName('listeningRate') } rate={skillsRate.listeningRate} />
-                        <LanguageSkillRate skillName={ getSkillName('speakingRate') } rate={skillsRate.speakingRate} />
-                        <LanguageSkillRate skillName={ getSkillName('readingRate') } rate={skillsRate.readingRate} />
-                        <LanguageSkillRate skillName={ getSkillName('writingRate') } rate={skillsRate.writingRate} />
-                    </Row>
-                </div>
-            }
-        </>
+        <div className='py-2'>
+            <Row>
+                <h3>{languageName}</h3>
+                <LanguageSkillRate skillName={ getSkillName('listeningRate') } rate={skillsRate.listeningRate} />
+                <LanguageSkillRate skillName={ getSkillName('speakingRate') } rate={skillsRate.speakingRate} />
+                <LanguageSkillRate skillName={ getSkillName('readingRate') } rate={skillsRate.readingRate} />
+                <LanguageSkillRate skillName={ getSkillName('writingRate') } rate={skillsRate.writingRate} />
+            </Row>
+        </div>
     )
 }
 
