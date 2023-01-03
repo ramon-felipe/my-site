@@ -8,23 +8,23 @@ const WorkExperienceSection = (): JSX.Element => {
     const workingExperiences: IWorkExperienceModel[] = workingExperienceData;
 
     return (
-        <Row className={styles.section} >
-            <Col className={styles.center}>
-                <h2>WORK EXPERIENCE</h2>
-            </Col>
+        <div className={styles.section} >
+            <div className={styles.center}>
+                <h2 className={styles.center}>WORK EXPERIENCE</h2>
+            </div>
             {
                 workingExperiences.map((w, index) =>                    
                     (
-                        <Row key={index}>
+                        <div key={index}>
                             <WorkExperience {...w}/>
-                        </Row>
+                        </div>
                     )
                 )
             }
-            <Row className='mt-4'>
+            <div className='mt-4'>
                 <hr/>
-            </Row>
-        </Row>
+            </div>
+        </div>
     )
 }
 

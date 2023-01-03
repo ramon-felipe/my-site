@@ -9,23 +9,23 @@ const LanguageSkillsSection = (): JSX.Element => {
     const data: ILanguageSkillsModel[] = languageData;
 
     return (
-        <Row className={styles.section} >
-            <Col className={styles.center}>
-                <h2>LANGUAGE SKILLS</h2>
-            </Col>
+        <div>
+            <div>
+                <h2 className={styles.center}>LANGUAGE SKILLS</h2>
+            </div>
             {
                 data.map((d, index) =>                    
                     (
-                        <Row key={index} className='p-2 mb-2 w-80 border border-2'>
+                        <div key={index} className='p-2 mb-2 w-80 border border-2'>
                             <LanguageSkills {...d}/>
-                        </Row>
+                        </div>
                     )
                 )
             }
-            <Row className='mt-4'>
+            <div className={styles.center}>
                 <hr/>
-            </Row>
-        </Row>
+            </div>
+        </div>
     )
 }
 

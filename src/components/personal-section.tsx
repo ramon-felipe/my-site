@@ -1,15 +1,14 @@
 import Image from 'react-bootstrap/Image'
 import React, { useRef } from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 import styles from '../../styles/Home.module.css'
 
 const PersonalSection = (): JSX.Element => {
     const imageRef = useRef(null);
 
     return (
-        <Row className={styles.section} >
-            <Row>
-                <Col className={styles.center}>                  
+        <>
+            <div className={styles.center}>
                     <Image 
                         src="/images/Ramon_no_background.png" 
                         alt="me"
@@ -20,13 +19,10 @@ const PersonalSection = (): JSX.Element => {
                         fluid
                         ref={imageRef}
                     />
-                </Col>
-            </Row>
-            <Row>
-                <Col className={styles.center}>
-                    <h1>RAMON FELIPE ALVES DE ARRUDA SILVA</h1>
-                </Col>
-            </Row>
+            </div>
+            <div className={styles.center}>
+                <h1>RAMON FELIPE ALVES DE ARRUDA SILVA</h1>
+            </div>
             <Row>
                 <Col className={styles.center}>              
                     <span><b>GENDER: </b>Male</span>
@@ -40,10 +36,10 @@ const PersonalSection = (): JSX.Element => {
                     <i className="bi bi-envelope-at-fill pe-2 " style={{fontSize: '2rem', color: 'cornflowerblue'}}></i><span><b>EMAIL: </b>ramon.felipe@hotmail.com</span>
                 </Col>
             </Row>
-            <Row className='mt-4'>
+            <div>
                 <hr/>
-            </Row>
-        </Row>
+            </div>
+        </>
     )
 }
 

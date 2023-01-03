@@ -16,21 +16,19 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Container className='py-4'>
-        <main className={styles.main}>
+      <main className={styles.main}>
+        <Container className='py-4' style={{backgroundColor: 'whitesmoke'}}>
+            <PersonalSection />
 
-          <PersonalSection />
+            <WorkExperienceSection />
 
-          <WorkExperienceSection />
+            <EducationSection />
 
-          <EducationSection />
+            <LanguageSkillsSection />
 
-          <LanguageSkillsSection />
-
-          <SkillsSection />
-
-        </main>
-      </Container>
+            <SkillsSection />
+        </Container>
+      </main>
     </>
   )
 }
