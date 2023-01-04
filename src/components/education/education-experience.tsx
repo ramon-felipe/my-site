@@ -30,7 +30,7 @@ export const EducationExperience = (props: IEducationExperienceModel) => {
 
                 <div className="pb-2">
                     <span>URI</span>
-                    <p><a href={webPage} target='_blank'><i className="bi bi-box-arrow-up-right"></i> {webPage}</a></p>
+                    <p><a href={webPage} target='_blank' rel="noreferrer"><i className="bi bi-box-arrow-up-right"></i> {webPage}</a></p>
                 </div>
             </Col>
         </Row>
