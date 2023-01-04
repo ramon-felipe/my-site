@@ -21,7 +21,7 @@ const PersonalSection = (): JSX.Element => {
                     />
             </div>
             <div className={styles.center}>
-                <h1>RAMON FELIPE ALVES DE ARRUDA SILVA</h1>
+                <h1>RAMON FELIPE ALVES DE ARRUDA</h1>
             </div>
             <Row>
                 <Col className={styles.center}>              

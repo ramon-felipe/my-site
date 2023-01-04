@@ -19,13 +19,15 @@ const LanguageSkills = (props: ILanguageSkillsModel) => {
 
     return (
         <div className='py-2'>
-            <Row>
+            <div>
                 <h3>{languageName}</h3>
-                <LanguageSkillRate skillName={ getSkillName('listeningRate') } rate={skillsRate.listeningRate} />
-                <LanguageSkillRate skillName={ getSkillName('speakingRate') } rate={skillsRate.speakingRate} />
-                <LanguageSkillRate skillName={ getSkillName('readingRate') } rate={skillsRate.readingRate} />
-                <LanguageSkillRate skillName={ getSkillName('writingRate') } rate={skillsRate.writingRate} />
-            </Row>
+                <Row>
+                    <LanguageSkillRate skillName={ getSkillName('listeningRate') } rate={skillsRate.listeningRate} />
+                    <LanguageSkillRate skillName={ getSkillName('speakingRate') } rate={skillsRate.speakingRate} />
+                    <LanguageSkillRate skillName={ getSkillName('readingRate') } rate={skillsRate.readingRate} />
+                    <LanguageSkillRate skillName={ getSkillName('writingRate') } rate={skillsRate.writingRate} />
+                </Row>
+            </div>
         </div>
     )
 }
