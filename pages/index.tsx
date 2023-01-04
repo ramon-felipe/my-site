@@ -7,7 +7,7 @@ import PersonalSection from '../src/components/personal-section'
 import WorkExperienceSection from '../src/components/work/work-experience-section'
 import EducationSection from '../src/components/education/education-section'
 import LanguageSkillsSection from '../src/components/language/language-skills-section'
-import SkillsSection from '../src/components/skills-section'
+import DigitalSkillsSection from '../src/components/digital-skills-section'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +26,7 @@ export default function Home() {
 
             <LanguageSkillsSection />
 
-            <SkillsSection />
+            <DigitalSkillsSection />
         </Container>
       </main>
     </>

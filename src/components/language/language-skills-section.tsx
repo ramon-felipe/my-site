@@ -57,9 +57,8 @@ const LanguageSkillsSection = (): JSX.Element => {
             </div>            
             { writeMotherTongue(data) }
             { writeOtherLanguages(data) }
-            <div className={styles.center}>
-                <hr/>
-            </div>
+            
+            <hr/>
         </div>
     )
 }
