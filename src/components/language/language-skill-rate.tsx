@@ -9,9 +9,12 @@ export const LanguageSkillRate = (props: LanguageSkillRateProps) => {
 
     return (
         <Col>
-            <div className={styles.center}>
-                {skillName}<span>: { writeRate(rate) }</span>
-            </div>
+            <Row className={styles.center}>
+                <Col className='p-2 m-2'>
+                    <div className={styles.center}>{skillName}</div>
+                    <div className={styles.center}>{writeRate(rate)}</div>
+                </Col>
+            </Row>
         </Col>
     );
 };
