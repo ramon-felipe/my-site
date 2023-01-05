@@ -10,7 +10,7 @@ const PersonalSection = (): JSX.Element => {
         <>
             <div className={styles.center}>
                     <Image 
-                        src="/images/Ramon_no_background.png" 
+                        src="/images/Ramon_no_background_.png" 
                         alt="me"
                         width="150"
                         height="auto"
