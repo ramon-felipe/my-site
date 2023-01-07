@@ -1,21 +1,21 @@
-import { Col, Row } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Col, Collapse, Row } from 'react-bootstrap';
 import styles from '../../../styles/Home.module.css'
 import IEducationExperienceModel from '../../models/education-experience-model';
+import CollapsableButton, { ICollapsableButtonProps } from '../common/collapsable-button';
 
 export const EducationExperience = (props: IEducationExperienceModel) => {
     const { school, course, from, to, address, webPage } = props;
+    const [open, setOpen] = useState(true);
 
-    return (
-        <Row>
-            <Col xs={1}>
-                    <div className={styles.right}>
-                        <i className="bi bi-caret-right-fill"></i>
-                    </div>
-            </Col>
-            <Col>
-                <div className="pt-2">
-                    <h3>school: {school}</h3>
-                </div>
+    const collapsableButtonProps: ICollapsableButtonProps = {
+        open: open,
+        setOpen: setOpen
+    }
+    
+    const schoolExperienceDetails = (): JSX.Element => {
+        return (
+            <div>
                 <div>
                     <h4>course: {course}</h4>
                 </div>
@@ -32,6 +32,24 @@ export const EducationExperience = (props: IEducationExperienceModel) => {
                     <span>URI</span>
                     <p><a href={webPage} target='_blank' rel="noreferrer"><i className="bi bi-box-arrow-up-right"></i> {webPage}</a></p>
                 </div>
+            </div>
+        )
+    }
+
+    return (
+        <Row>
+            <Col xs={1}>
+                <div className={styles.right}>
+                    <CollapsableButton {...collapsableButtonProps} />
+                </div>
+            </Col>
+            <Col>
+                <div className="pt-2">
+                    <h3>school: {school}</h3>
+                </div>
+                <Collapse in={open}>
+                    { schoolExperienceDetails() }
+                </Collapse>
             </Col>
         </Row>
     );
