@@ -9,25 +9,24 @@ interface ITriggerExampleProps {
     placement?: Placement    
 }
 
-function TriggerExample(props: ITriggerExampleProps) {
+function TriggerTooltip(props: ITriggerExampleProps) {
     const { element, placement, text } = props;
 
     const renderTooltip = (props: TooltipProps) => (
         <Tooltip id="element-tooltip" {...props}>
             { text }
-        {/* Simple tooltip */}
         </Tooltip>
     );
 
     return (
         <OverlayTrigger
-        placement={placement}
-        delay={{ show: 250, hide: 400 }}      
-        overlay={renderTooltip}
+            placement={placement}
+            delay={{ show: 250, hide: 400 }}      
+            overlay={renderTooltip}
         >
             { element }
         </OverlayTrigger>
     );
 }
 
-export default TriggerExample;
+export default TriggerTooltip;
