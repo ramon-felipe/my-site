@@ -21,7 +21,7 @@ const DigitalSkillsSection = (): JSX.Element => {
                     dataArr.map((d, i) => {
                         return (
                             <Col sm={4} md={3} key={i} className='p-2 m-2 border border-2'>
-                                <div className={styles.center}>{t(d.skillName)}</div>
+                                <div className={styles.center}>{t(d.skillName).UpperCaseFirstLetter()}</div>
                                 <div className={styles.center}>{writeRate(d.rate)}</div>
                             </Col>
                         )
@@ -35,7 +35,7 @@ const DigitalSkillsSection = (): JSX.Element => {
     return (
         <div className={styles.section} >
             <div className={styles.center}>
-                <h2 className={styles.center}>{t('digital-skills')}</h2>
+                <h2 className={styles.center}>{t('digital-skills').UpperCaseFirstLetter()}</h2>
             </div>
             <div className='px-5'>
                 { write(data) }

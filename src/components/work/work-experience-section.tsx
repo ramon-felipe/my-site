@@ -11,7 +11,7 @@ const WorkExperienceSection = (): JSX.Element => {
     return (
         <div className={styles.section} >
             <div className={styles.center}>
-                <h2 className={styles.center}>{t('work-experience')}</h2>
+                <h2 className={styles.center}>{t('work-experience').UpperCaseFirstLetter()}</h2>
             </div>
             {
                 workingExperiences.map((w, index) =>                    

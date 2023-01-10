@@ -19,13 +19,13 @@ export const EducationExperience = (props: IEducationExperienceModel) => {
         return (
             <div>
                 <div>
-                    <h4>{t('course')}: {t(course)}</h4>
+                    <h4>{t('course').UpperCaseFirstLetter()}: {t(course).UpperCaseFirstLetter()}</h4>
                 </div>
                 <div>
-                    <h5>{t('from')}: {from} {t('to')}: {to}</h5>
+                    <h5>{t('from').UpperCaseFirstLetter()}: {from} {t('to').UpperCaseFirstLetter()}: {to}</h5>
                 </div>
                 <div>
-                    <i className="bi bi-geo-alt-fill"></i> {t('address')}: {address}
+                    <i className="bi bi-geo-alt-fill"></i> {t('address').UpperCaseFirstLetter()}: {address}
                 </div>
 
                 <hr className="mt-3" />
@@ -47,7 +47,7 @@ export const EducationExperience = (props: IEducationExperienceModel) => {
             </Col>
             <Col>
                 <div className="pt-2">
-                    <h3>{t('school')}: {t(school)}</h3>
+                    <h3>{t('school').UpperCaseFirstLetter()}: {t(school).UpperCaseFirstLetter()}</h3>
                 </div>
                 <Collapse in={open}>
                     { schoolExperienceDetails() }

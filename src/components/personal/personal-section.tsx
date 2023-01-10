@@ -3,8 +3,8 @@ import React, { useRef } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import styles from '../../../styles/Home.module.css'
 import useIconsSvg, { IiconSvgProps } from '../../hooks/useIconsSVG'
-
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
+import '../../extensions/string-extensions'
 
 const PersonalSection = (): JSX.Element => {
     const { t } = useTranslation();
@@ -23,7 +23,7 @@ const PersonalSection = (): JSX.Element => {
     const gender = (): JSX.Element => {
         return (
             <Col className={styles.center} sm={12} md={4} xl={3}>
-                <span><b>{t('gender')}: </b>{t('male')}</span>
+                <span><b>{t('gender').UpperCaseFirstLetter()}: </b>{t('male').UpperCaseFirstLetter()}</span>
             </Col>
         )
     }
@@ -31,7 +31,7 @@ const PersonalSection = (): JSX.Element => {
     const nationality = (): JSX.Element => {
         return (
             <Col className={styles.center} sm={12} md={4} xl={3}>
-                <span><b>{t('nationality')}: </b>{t('brazilian')}</span>
+                <span><b>{t('nationality').UpperCaseFirstLetter()}: </b>{t('brazilian').UpperCaseFirstLetter()}</span>
             </Col>
         )
     }

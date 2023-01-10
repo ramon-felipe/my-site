@@ -13,7 +13,7 @@ const EducationSection = (): JSX.Element => {
     return (
         <div className={styles.section} >
             <div>
-                <h2 className={styles.center}>{t('education')}</h2>
+                <h2 className={styles.center}>{t('education').UpperCaseFirstLetter()}</h2>
             </div>            
             {
                 educationExperiences.map((e, index) =>                    

@@ -19,7 +19,7 @@ const LanguageSkillsSection = (): JSX.Element => {
         return (
             <div className={styles.center}>
                 <div className='p-2 mb-2 w-75 border border-2'>
-                    <MotherTongue languageName={motherTongue.languageName}/>
+                    <MotherTongue languageName={motherTongue.languageName.UpperCaseFirstLetter()}/>
                 </div>
             </div>
         )
@@ -34,7 +34,7 @@ const LanguageSkillsSection = (): JSX.Element => {
         let result = 
         <div className={styles.center}>
             <div className='p-2 mb-2 w-75 border border-2'>
-                {t('other-languages')}:
+                {t('other-languages').UpperCaseFirstLetter(true)}:
                 {
                     otherLanguages.map((d, index) =>                    
                     {
@@ -54,7 +54,7 @@ const LanguageSkillsSection = (): JSX.Element => {
     return (
         <div>
             <div>
-                <h2 className={styles.center}>{t('language-skills')}</h2>
+                <h2 className={styles.center}>{t('language-skills').UpperCaseFirstLetter()}</h2>
             </div>            
             { writeMotherTongue(data) }
             { writeOtherLanguages(data) }
