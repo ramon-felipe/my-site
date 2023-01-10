@@ -19,19 +19,19 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
         return (
             <div className="pb-2">                
                 <div>
-                    <h4>{t('company')}: {t(company)}</h4>
+                    <h4>{t('company').UpperCaseFirstLetter()}: {t(company)}</h4>
                 </div>
                 <div>
-                    <h5>{t('from')}: {from} {t('to')}: {to}</h5>
+                    <h5>{t('from').UpperCaseFirstLetter()}: {from} {t('to').UpperCaseFirstLetter()}: { to === 'current' ? t('current') : to }</h5>
                 </div>
                 <div>
-                    <i className="bi bi-geo-alt-fill"></i> {t('city')}: {city}, {t('country')}: {country}
+                    <i className="bi bi-geo-alt-fill"></i> {t('city').UpperCaseFirstLetter()}: {city.UpperCaseFirstLetter()}, {t('country').UpperCaseFirstLetter()}: {country.UpperCaseFirstLetter()}
                 </div>
                 
                 <hr className="mt-3" />
 
                 <div>
-                    <span><b>{t('description')}</b></span>
+                    <span><b>{t('description').UpperCaseFirstLetter()}</b></span>
                     <p>{t(`job_description.${job_description}`)}</p>
                 </div>
             </div>
@@ -47,7 +47,7 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
             </Col>
             <Col>
                 <div className="pt-2">                    
-                    <h3><b>{t('role')}</b>: {t(role)}</h3>
+                    <h3><b>{t('role').UpperCaseFirstLetter()}</b>: {t(role)}</h3>
                 </div>
                 <Collapse in={open}>
                     { experienceDetails() }

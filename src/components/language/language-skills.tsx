@@ -22,12 +22,24 @@ const LanguageSkills = (props: ILanguageSkillsModel) => {
     return (
         <div className='py-2'>
             <div>
-                <h3>{t(languageName)}</h3>
+                <h3>{t(languageName).UpperCaseFirstLetter()}</h3>
                 <Row>
-                    <LanguageSkillRate skillName={ t(`english-fluency.${getSkillName('listeningRate')}`) } rate={skillsRate.listeningRate} />
-                    <LanguageSkillRate skillName={ t(`english-fluency.${getSkillName('speakingRate')}`) } rate={skillsRate.speakingRate} />
-                    <LanguageSkillRate skillName={ t(`english-fluency.${getSkillName('readingRate')}`) } rate={skillsRate.readingRate} />
-                    <LanguageSkillRate skillName={ t(`english-fluency.${getSkillName('writingRate')}`) } rate={skillsRate.writingRate} />
+                    <LanguageSkillRate 
+                        skillName={ t(`english-fluency.${getSkillName('listeningRate')}`).UpperCaseFirstLetter() } 
+                        rate={skillsRate.listeningRate} 
+                    />
+                    <LanguageSkillRate 
+                        skillName={ t(`english-fluency.${getSkillName('speakingRate')}`).UpperCaseFirstLetter() } 
+                        rate={skillsRate.speakingRate} 
+                    />
+                    <LanguageSkillRate 
+                        skillName={ t(`english-fluency.${getSkillName('readingRate')}`).UpperCaseFirstLetter() } 
+                        rate={skillsRate.readingRate} 
+                    />
+                    <LanguageSkillRate 
+                        skillName={ t(`english-fluency.${getSkillName('writingRate')}`).UpperCaseFirstLetter() }
+                        rate={skillsRate.writingRate} 
+                    />
                 </Row>
             </div>
         </div>

@@ -6,8 +6,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         company: "BTG Pactual",
         from: "01/06/2021",
         to: "current",
-        city: "São Paulo",
-        country: "Brasil",
+        city: "são Paulo",
+        country: "brasil",
         job_description_i18n: "btg"
     },
     {
@@ -15,8 +15,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         company: "Santander",
         from: "01/01/2020",
         to: "01/05/2021",
-        city: "São Paulo",
-        country: "Brasil",
+        city: "são Paulo",
+        country: "brasil",
         job_description_i18n: "emdia"
     },
     {
@@ -24,8 +24,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         company: "Bizapp",
         from: "01/10/2018",
         to: "01/12/2019",
-        city: "São Paulo",
-        country: "Brasil",
+        city: "são Paulo",
+        country: "brasil",
         job_description_i18n: "bizzap"
     },
     {
@@ -33,8 +33,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         company: "HDI Group",
         from: "01/04/2018",
         to: "01/10/2018",
-        city: "São Paulo",
-        country: "Brasil",
+        city: "são Paulo",
+        country: "brasil",
         job_description_i18n: "hdi"
     },
     {
@@ -42,8 +42,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         company: "eDok",
         from: "01/01/2012",
         to: "01/07/2012",
-        city: "São Paulo",
-        country: "Brasil",
+        city: "são paulo",
+        country: "brasil",
         job_description_i18n: "edok"
     },
     {
@@ -51,8 +51,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         company: "seme",
         from: "01/01/2009",
         to: "01/12/2010",
-        city: "São Paulo",
-        country: "Brasil",
+        city: "são paulo",
+        country: "brasil",
         job_description_i18n: "sec_sports"
     }
 ]
