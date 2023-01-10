@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next';
 import styles from '../../../styles/Home.module.css'
 import languageData from '../../data/language-skills-data'
 import ILanguageSkillsModel from '../../models/language-skills-models';
@@ -7,6 +7,7 @@ import LanguageSkills from './language-skills';
 import MotherTongue from './mother-tongue';
 
 const LanguageSkillsSection = (): JSX.Element => {
+    const { t } = useTranslation();
     const data: ILanguageSkillsModel[] = languageData;
 
     const writeMotherTongue = (languages: ILanguageSkillsModel[]): JSX.Element => {
@@ -33,7 +34,7 @@ const LanguageSkillsSection = (): JSX.Element => {
         let result = 
         <div className={styles.center}>
             <div className='p-2 mb-2 w-75 border border-2'>
-                Other Languages:
+                {t('other-languages')}:
                 {
                     otherLanguages.map((d, index) =>                    
                     {
@@ -53,7 +54,7 @@ const LanguageSkillsSection = (): JSX.Element => {
     return (
         <div>
             <div>
-                <h2 className={styles.center}>LANGUAGE SKILLS</h2>
+                <h2 className={styles.center}>{t('language-skills')}</h2>
             </div>            
             { writeMotherTongue(data) }
             { writeOtherLanguages(data) }

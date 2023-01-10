@@ -3,9 +3,11 @@ import IWorkExperienceModel from "../../models/work-experience-model";
 import styles from '../../../styles/Home.module.css'
 import React, { useState } from 'react';
 import CollapsableButton, { ICollapsableButtonProps } from '../common/collapsable-button';
+import { useTranslation, Trans } from 'react-i18next'
 
 export const WorkExperience = (props: IWorkExperienceModel) => {
-    const { role, company, from, to, city, country, description } = props;
+    const { t } = useTranslation();
+    const { role, company, from, to, city, country, job_description_i18n: job_description } = props;
     const [open, setOpen] = useState(true);
 
     const collapsableButtonProps: ICollapsableButtonProps = {
@@ -17,20 +19,20 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
         return (
             <div className="pb-2">                
                 <div>
-                    <h4>Company: {company}</h4>
+                    <h4>{t('company')}: {t(company)}</h4>
                 </div>
                 <div>
-                    <h5>From: {from} To: {to}</h5>
+                    <h5>{t('from')}: {from} {t('to')}: {to}</h5>
                 </div>
                 <div>
-                    <i className="bi bi-geo-alt-fill"></i> City: {city}, Country: {country}
+                    <i className="bi bi-geo-alt-fill"></i> {t('city')}: {city}, {t('country')}: {country}
                 </div>
                 
                 <hr className="mt-3" />
 
                 <div>
-                    <span>Description</span>
-                    <p>{description}</p>
+                    <span><b>{t('description')}</b></span>
+                    <p>{t(`job_description.${job_description}`)}</p>
                 </div>
             </div>
         )
@@ -45,7 +47,7 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
             </Col>
             <Col>
                 <div className="pt-2">                    
-                    <h3><b>Role</b>: {role}</h3>
+                    <h3><b>{t('role')}</b>: {t(role)}</h3>
                 </div>
                 <Collapse in={open}>
                     { experienceDetails() }
