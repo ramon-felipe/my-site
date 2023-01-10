@@ -2,7 +2,7 @@ import ILanguageSkillsModel from "../models/language-skills-models";
 
 const languageData: ILanguageSkillsModel[] = [
     {
-        languageName: 'Portuguese',
+        languageName: 'portuguese',
         motherTongue: true,
         listeningRate: 5,
         readingRate: 5,
@@ -10,7 +10,7 @@ const languageData: ILanguageSkillsModel[] = [
         writingRate: 5
     },
     {
-        languageName: 'English',
+        languageName: 'english',
         motherTongue: false,
         listeningRate: 4,
         readingRate: 4,

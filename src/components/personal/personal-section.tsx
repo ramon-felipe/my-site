@@ -1,25 +1,29 @@
 import Image from 'react-bootstrap/Image'
 import React, { useRef } from 'react'
 import { Row, Col } from 'react-bootstrap'
-import styles from '../../styles/Home.module.css'
-import useIconsSvg, { IiconSvgProps } from '../hooks/useIconsSVG'
+import styles from '../../../styles/Home.module.css'
+import useIconsSvg, { IiconSvgProps } from '../../hooks/useIconsSVG'
+
+import { useTranslation, Trans } from 'react-i18next'
 
 const PersonalSection = (): JSX.Element => {
+    const { t } = useTranslation();
+
     const imageRef = useRef(null);
     const svgIcons = useIconsSvg();
 
     const mailIconStyle: IiconSvgProps = {
-        style: {color: 'cornflowerblue', width: '40', height: '40'}
+        style: {color: 'cornflowerblue', width: '2rem', height: '2rem'}
     }
 
     const wppIconStyle: IiconSvgProps = {
-        style: {color: 'green', width: '35', height: '35'}
+        style: {color: 'green', width: '2rem', height: '2rem'}
     }
 
     const gender = (): JSX.Element => {
         return (
-            <Col className={styles.center} sm={12} md={4} xl={3}>              
-                <span><b>GENDER: </b>Male</span>
+            <Col className={styles.center} sm={12} md={4} xl={3}>
+                <span><b>{t('gender')}: </b>{t('male')}</span>
             </Col>
         )
     }
@@ -27,14 +31,14 @@ const PersonalSection = (): JSX.Element => {
     const nationality = (): JSX.Element => {
         return (
             <Col className={styles.center} sm={12} md={4} xl={3}>
-                <span><b>NATIONALITY: </b>Brazilian</span>
+                <span><b>{t('nationality')}: </b>{t('brazilian')}</span>
             </Col>
         )
     }
 
     const email = (): JSX.Element => {
         return (
-            <Col className={styles.center}  sm={12} md={5} xl={3}>
+            <Col className={styles.center} sm={12} md={5} xl={3}>
                 <a href="mailto:ramon.felipe@hotmail.com?subject=Contato">
                     { svgIcons.mailAtIcon(mailIconStyle) }
                     <span className='ps-2'>ramon.felipe@hotmail.com</span>
@@ -45,7 +49,7 @@ const PersonalSection = (): JSX.Element => {
 
     const wpp = (): JSX.Element => {
         return (
-            <Col className={styles.center}  sm={12} md={5} xl={3}>
+            <Col className={styles.center} sm={12} md={5} xl={3}>
                 <a href="https://api.whatsapp.com/send?phone=5511934204993" target='_blank' rel="noreferrer">
                     { svgIcons.wppIcon(wppIconStyle) }
                     <span className='ps-2'>+55 11 93420 4993</span>

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Col, Collapse, Row } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 import styles from '../../../styles/Home.module.css'
 import IEducationExperienceModel from '../../models/education-experience-model';
 import CollapsableButton, { ICollapsableButtonProps } from '../common/collapsable-button';
 
 export const EducationExperience = (props: IEducationExperienceModel) => {
+    const { t } = useTranslation();
     const { school, course, from, to, address, webPage } = props;
     const [open, setOpen] = useState(true);
 
@@ -17,13 +19,13 @@ export const EducationExperience = (props: IEducationExperienceModel) => {
         return (
             <div>
                 <div>
-                    <h4>course: {course}</h4>
+                    <h4>{t('course')}: {t(course)}</h4>
                 </div>
                 <div>
-                    <h5>from: {from} to: {to}</h5>
+                    <h5>{t('from')}: {from} {t('to')}: {to}</h5>
                 </div>
                 <div>
-                    <i className="bi bi-geo-alt-fill"></i> Address: {address}
+                    <i className="bi bi-geo-alt-fill"></i> {t('address')}: {address}
                 </div>
 
                 <hr className="mt-3" />
@@ -45,7 +47,7 @@ export const EducationExperience = (props: IEducationExperienceModel) => {
             </Col>
             <Col>
                 <div className="pt-2">
-                    <h3>school: {school}</h3>
+                    <h3>{t('school')}: {t(school)}</h3>
                 </div>
                 <Collapse in={open}>
                     { schoolExperienceDetails() }
