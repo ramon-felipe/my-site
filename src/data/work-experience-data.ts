@@ -8,7 +8,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: "current",
         city: "são Paulo",
         country: "brasil",
-        job_description_i18n: "btg"
+        job_description_i18n: "btg",
+        webpage: "https://www.btgpactual.com/"
     },
     {
         role: "backend_developer",
@@ -17,7 +18,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: "01/05/2021",
         city: "são Paulo",
         country: "brasil",
-        job_description_i18n: "emdia"
+        job_description_i18n: "emdia",
+        webpage: "https://euemdia.com.br/"
     },
     {
         role: "test_engineer",
@@ -26,7 +28,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: "01/12/2019",
         city: "são Paulo",
         country: "brasil",
-        job_description_i18n: "bizzap"
+        job_description_i18n: "bizzap",
+        webpage: "https://bizapp.com.br/"
     },
     {
         role: "test_engineer",
@@ -35,7 +38,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: "01/10/2018",
         city: "são Paulo",
         country: "brasil",
-        job_description_i18n: "hdi"
+        job_description_i18n: "hdi",
+        webpage: "https://grupohdi.com/"
     },
     {
         role: "software_developer",
@@ -44,7 +48,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: "01/07/2012",
         city: "são paulo",
         country: "brasil",
-        job_description_i18n: "edok"
+        job_description_i18n: "edok",
+        webpage: "https://www.edok.com.br/#/"
     },
     {
         role: "software_developer",
@@ -53,7 +58,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: "01/12/2010",
         city: "são paulo",
         country: "brasil",
-        job_description_i18n: "sec_sports"
+        job_description_i18n: "sec_sports",
+        webpage: "https://www.prefeitura.sp.gov.br/cidade/secretarias/esportes/"
     }
 ]
 
