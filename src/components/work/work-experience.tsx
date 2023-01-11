@@ -7,7 +7,7 @@ import { useTranslation, Trans } from 'react-i18next'
 
 export const WorkExperience = (props: IWorkExperienceModel) => {
     const { t } = useTranslation();
-    const { role, company, from, to, city, country, job_description_i18n: job_description } = props;
+    const { role, company, from, to, city, country, job_description_i18n: job_description, webpage } = props;
     const [open, setOpen] = useState(true);
 
     const collapsableButtonProps: ICollapsableButtonProps = {
@@ -18,14 +18,27 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
     const experienceDetails = (): JSX.Element => {
         return (
             <div className="pb-2">                
-                <div>
-                    <h4>{t('company').UpperCaseFirstLetter()}: {t(company)}</h4>
+                <div className="mb-2">
+                    {t('company').UpperCaseFirstLetter()}
+                    : <a href={webpage} target="_blank" rel="noreferrer">
+                        <h4 className='pe-2 d-inline'>
+                            {t(company)}                            
+                        </h4>
+                        <i className="bi bi-box-arrow-up-right" style={{width:'1rem', height:'1rem'}}></i>
+                    </a>
                 </div>
-                <div>
-                    <h5>{t('from').UpperCaseFirstLetter()}: {from} {t('to').UpperCaseFirstLetter()}: { to === 'current' ? t('current') : to }</h5>
+                <div className="mb-2">
+                    {t('from').UpperCaseFirstLetter()}
+                    : <h6 className='d-inline'>{from} </h6> 
+                    {t('to').UpperCaseFirstLetter()}  
+                    <h6 className='d-inline'>
+                        : { to === 'current' ? t('current').UpperCaseFirstLetter() : to }
+                    </h6>
                 </div>
-                <div>
-                    <i className="bi bi-geo-alt-fill"></i> {t('city').UpperCaseFirstLetter()}: {city.UpperCaseFirstLetter()}, {t('country').UpperCaseFirstLetter()}: {country.UpperCaseFirstLetter()}
+                <div className="mb-2">
+                    <i className="bi bi-geo-alt-fill me-2"></i> 
+                    {t('city').UpperCaseFirstLetter()}
+                    : {city.UpperCaseFirstLetter()}, {t('country').UpperCaseFirstLetter()}: {country.UpperCaseFirstLetter()}
                 </div>
                 
                 <hr className="mt-3" />
@@ -46,8 +59,8 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
                 </div>
             </Col>
             <Col>
-                <div className="pt-2">                    
-                    <h3><b>{t('role').UpperCaseFirstLetter()}</b>: {t(role)}</h3>
+                <div className="pt-2 mb-2" style={{fontSize:'2rem'}}>                    
+                    {t('role').UpperCaseFirstLetter()}: <h3 className='d-inline'>{t(role).UpperCaseFirstLetter()}</h3>
                 </div>
                 <Collapse in={open}>
                     { experienceDetails() }
