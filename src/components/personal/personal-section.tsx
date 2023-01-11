@@ -58,6 +58,18 @@ const PersonalSection = (): JSX.Element => {
         )
     }
 
+    const medium = (): JSX.Element => {
+        return (
+            <Col className={styles.center} sm={12} md={5} xl={3}>
+                <a href="https://medium.com/@ramon_arruda_it" target='_blank' rel="noreferrer">
+                    { svgIcons.mediumIcon() }
+                    <span className='ps-2 d-none d-sm-inline'>medium.com/@ramon_arruda_it</span>
+                    <span className='ps-2 d-sm-none'>medium.com</span>
+                </a>
+            </Col>
+        )
+    }
+
     return (
         <>
             <div className={styles.center}>
@@ -81,8 +93,11 @@ const PersonalSection = (): JSX.Element => {
             <Row className={styles.center}>
                 { gender() }
                 { nationality() }
-                { email() }
-                { wpp() }
+                <Row className={styles.center}>
+                    { email() }
+                    { wpp() }
+                    { medium() }
+                </Row>
             </Row>
 
             <div>
