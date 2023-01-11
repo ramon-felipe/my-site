@@ -101,7 +101,7 @@ const PersonalSection = (): JSX.Element => {
                     />
             </div>
             <div className={styles.center}>
-                <h1 className="d-none d-md-block d-lg-none">RAMON FELIPE ALVES DE ARRUDA</h1>
+                <h1 className="d-none d-sm-none d-md-block">RAMON FELIPE ALVES DE ARRUDA</h1>
                 <h1 className="d-none d-sm-block d-md-none">RAMON FELIPE DE ARRUDA</h1>
                 <h1 className="d-block d-sm-none">RAMON FELIPE</h1>
             </div>
