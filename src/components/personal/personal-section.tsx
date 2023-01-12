@@ -3,8 +3,8 @@ import React, { useRef } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import styles from '../../../styles/Home.module.css'
 import useIconsSvg, { IiconSvgProps } from '../../hooks/useIconsSVG'
-
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
+import '../../extensions/string-extensions'
 
 const PersonalSection = (): JSX.Element => {
     const { t } = useTranslation();
@@ -20,10 +20,14 @@ const PersonalSection = (): JSX.Element => {
         style: {color: 'green', width: '2rem', height: '2rem'}
     }
 
+    const linkedinIconStyle: IiconSvgProps = {
+        style: {color: 'cornflowerblue', width: '2rem', height: '2rem'}
+    }
+
     const gender = (): JSX.Element => {
         return (
             <Col className={styles.center} sm={12} md={4} xl={3}>
-                <span><b>{t('gender')}: </b>{t('male')}</span>
+                <span><b>{t('gender').UpperCaseFirstLetter()}: </b>{t('male').UpperCaseFirstLetter()}</span>
             </Col>
         )
     }
@@ -31,7 +35,7 @@ const PersonalSection = (): JSX.Element => {
     const nationality = (): JSX.Element => {
         return (
             <Col className={styles.center} sm={12} md={4} xl={3}>
-                <span><b>{t('nationality')}: </b>{t('brazilian')}</span>
+                <span><b>{t('nationality').UpperCaseFirstLetter()}: </b>{t('brazilian').UpperCaseFirstLetter()}</span>
             </Col>
         )
     }
@@ -53,6 +57,30 @@ const PersonalSection = (): JSX.Element => {
                 <a href="https://api.whatsapp.com/send?phone=5511934204993" target='_blank' rel="noreferrer">
                     { svgIcons.wppIcon(wppIconStyle) }
                     <span className='ps-2'>+55 11 93420 4993</span>
+                </a>
+            </Col>
+        )
+    }
+
+    const medium = (): JSX.Element => {
+        return (
+            <Col className={styles.center} sm={12} md={6} xl={3}>
+                <a href="https://medium.com/@ramon_arruda_it" target='_blank' rel="noreferrer">
+                    { svgIcons.mediumIcon() }
+                    <span className='ps-2 d-none d-sm-inline'>medium.com/@ramon_arruda_it</span>
+                    <span className='ps-2 d-sm-none'>medium.com</span>
+                </a>
+            </Col>
+        )
+    }
+
+    const linkedin = (): JSX.Element => {
+        return (
+            <Col className={styles.center} sm={12} md={6} xl={3}>
+                <a href="https://www.linkedin.com/in/ramonarruda-it/" target='_blank' rel="noreferrer">
+                    { svgIcons.linkedinIcon(linkedinIconStyle) }
+                    <span className='ps-2 d-none d-sm-inline'>linkedin.com/in/ramonarruda-it/t</span>
+                    <span className='ps-2 d-sm-none'>linkedin.com</span>
                 </a>
             </Col>
         )
@@ -81,8 +109,12 @@ const PersonalSection = (): JSX.Element => {
             <Row className={styles.center}>
                 { gender() }
                 { nationality() }
-                { email() }
-                { wpp() }
+                <Row className={styles.center}>
+                    { email() }
+                    { wpp() }
+                    { medium() }
+                    { linkedin() }
+                </Row>
             </Row>
 
             <div>

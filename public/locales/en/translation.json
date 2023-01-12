@@ -10,7 +10,7 @@
     "test_engineer": "test engineer",
     "software_developer": "software developer",
     "company": "company",
-    "seme": "municipal department of sports",
+    "seme": "Municipal Department of Sports",
     "from": "from",
     "to": "to",
     "city": "city",
@@ -45,5 +45,6 @@
     "digital-skills": "digital skills",
     "unit-test": "unit test",
     "oop": "oop",
-    "design-patterns": "design patterns"
+    "design-patterns": "design patterns",
+    "current": "current"
 }

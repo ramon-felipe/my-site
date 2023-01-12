@@ -4,7 +4,8 @@ export default interface IWorkExperienceModel {
     from: string, 
     to: string, 
     city: string, 
-    country: string, 
+    country: string,
     job_description_i18n: string,
+    webpage: string
 }
 
