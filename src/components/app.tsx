@@ -8,14 +8,16 @@ import DynamicWorkExperienceSection from './work/dynamic-work-experience-section
 import DynamicEducationSection from './education/dynamic-personal-section'
 import DynamicLanguageSection from './language/dynamic-personal-section'
 import DynamicDigitalSkillsSection from './digital-skills/dynamic-digital-skills-section'
+import MenuNav from './menu-nav'
 
 const App = (): JSX.Element => {
     return (
         <>
             <Header />
-            <LanguageSelector />
+            
             <main className={styles.main}>
-                <Container className='py-4' style={{backgroundColor: 'whitesmoke'}}>
+                <MenuNav />
+                <Container fluid style={{backgroundColor: 'whitesmoke'}}>
                     <DynamicPersonalSection />
         
                     <DynamicWorkExperienceSection />

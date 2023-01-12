@@ -16,14 +16,14 @@ const LanguageSelector = (): JSX.Element => {
                 role="button" 
                 onClick={() => handleLanguageChange('en')}
             >
-                <Flags.US style={{width:'3rem', height:'3rem'}} />
+                <Flags.US style={{width:'2rem', height:'2rem'}} />
             </a>
             <a 
                 className="btn" 
                 role="button" 
                 onClick={() => handleLanguageChange('pt')}
             >
-                <Flags.BR style={{width:'3rem', height:'3rem'}} />
+                <Flags.BR style={{width:'2rem', height:'2rem'}} />
             </a>
         </div>
     )
