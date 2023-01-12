@@ -59,17 +59,17 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
 
     const showCollapsedDetails = (): JSX.Element => {
         return (
-            <>
-                <div className="d-none d-md-inline d-xl-none ms-2" style={{fontSize:'1rem'}}>
+            <div>
+                <div className="d-none d-sm-inline d-lg-none ms-2" style={{fontSize:'1rem'}}>
                     ({ companyDetails() })
                 </div>
-                <div className="d-none d-xl-inline d-xxl-none ms-2" style={{fontSize:'1rem'}}>
+                <div className="d-none d-lg-inline d-xxl-none ms-2" style={{fontSize:'1rem'}}>
                     ({ companyDetails() } | { fromToDetails() })
                 </div>
                 <div className="d-none d-xxl-inline ms-2" style={{fontSize:'1rem'}}>
                     ({ companyDetails() } | { fromToDetails() } | { addressDetail() })
                 </div>
-            </>
+            </div>
         )
     }
 
@@ -97,8 +97,8 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
     }
 
     return (
-        <Row>
-            <Col className='pt-2' xs={1}>
+        <Row className='pe-3 pe-sm-5'>
+            <Col className='pt-3 px-2' xs={2} sm={1}>
                 <div className={styles.right}>
                     <CollapsableButton {...collapsableButtonProps} />
                 </div>
@@ -106,11 +106,14 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
             <Col>
                 <div className="pt-2 mb-2" style={{fontSize:'2rem'}}>                    
                     { t('role').UpperCaseFirstLetter()}: <h3 className='d-inline'>{t(role).UpperCaseFirstLetter() }</h3>
-                    { !open && showCollapsedDetails() }
                 </div>
+                <Collapse in={(!open)}>
+                        {showCollapsedDetails()}
+                </Collapse>
                 <Collapse in={open}>
                     { experienceDetails() }
                 </Collapse>
+                
                 <hr className={open ? 'd-none' : 'd-block'} />
             </Col>
         </Row>

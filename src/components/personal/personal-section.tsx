@@ -68,7 +68,7 @@ const PersonalSection = (): JSX.Element => {
                 <a href="https://medium.com/@ramon_arruda_it" target='_blank' rel="noreferrer">
                     { svgIcons.mediumIcon() }
                     <span className='ps-2 d-none d-sm-inline'>medium.com/@ramon_arruda_it</span>
-                    <span className='ps-2 d-sm-none'>medium.com</span>
+                    <span className='ps-2 d-sm-none'>@ramon_arruda_it</span>
                 </a>
             </Col>
         )
@@ -79,10 +79,10 @@ const PersonalSection = (): JSX.Element => {
             <Col className={styles.center} sm={12} md={6} xl={3}>
                 <a href="https://www.linkedin.com/in/ramonarruda-it/" target='_blank' rel="noreferrer">
                     { svgIcons.linkedinIcon(linkedinIconStyle) }
-                    <span className='ps-2 d-none d-sm-inline'>linkedin.com/in/ramonarruda-it/t</span>
-                    <span className='ps-2 d-sm-none'>linkedin.com</span>
+                    <span className='ps-2 d-none d-sm-inline'>linkedin.com/in/ramonarruda-it</span>
+                    <span className='ps-2 d-sm-none'>ramonarruda-it</span>
                 </a>
-            </Col>
+            </Col>  
         )
     }
 
