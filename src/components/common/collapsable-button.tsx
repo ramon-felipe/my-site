@@ -24,6 +24,7 @@ const CollapsableButton = (props: ICollapsableButtonProps): JSX.Element => {
                 aria-controls="example-collapse-text"
                 aria-expanded={open}
                 ref={target}
+                className="p-0"
             >
                 <i className={`bi bi-caret-${open ? 'down' : 'right'}-fill`}></i>
             </Button>
