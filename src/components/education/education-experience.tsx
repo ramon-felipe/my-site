@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import styles from '../../../styles/Home.module.css'
 import IEducationExperienceModel from '../../models/education-experience-model';
 import CollapsableButton, { ICollapsableButtonProps } from '../common/collapsable-button';
+import '../../extensions/string-extensions'
 
 export const EducationExperience = (props: IEducationExperienceModel) => {
     const { t } = useTranslation();

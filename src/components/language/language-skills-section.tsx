@@ -5,6 +5,7 @@ import languageData from '../../data/language-skills-data'
 import ILanguageSkillsModel from '../../models/language-skills-models';
 import LanguageSkills from './language-skills';
 import MotherTongue from './mother-tongue';
+import '../../extensions/string-extensions'
 
 const LanguageSkillsSection = (): JSX.Element => {
     const { t } = useTranslation();

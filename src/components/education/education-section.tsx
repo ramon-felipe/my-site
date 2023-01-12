@@ -5,6 +5,7 @@ import styles from '../../../styles/Home.module.css'
 import educationExperienceData from '../../data/education-experience-data';
 import IEducationExperienceModel from '../../models/education-experience-model';
 import { EducationExperience } from './education-experience';
+import '../../extensions/string-extensions'
 
 const EducationSection = (): JSX.Element => {
     const { t } = useTranslation();

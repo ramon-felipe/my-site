@@ -3,6 +3,7 @@ import workingExperienceData from '../../data/work-experience-data'
 import IWorkExperienceModel from "../../models/work-experience-model";
 import { WorkExperience } from './work-experience';
 import { useTranslation, Trans } from 'react-i18next'
+import '../../extensions/string-extensions'
 
 const WorkExperienceSection = (): JSX.Element => {
     const { t, i18n } = useTranslation();

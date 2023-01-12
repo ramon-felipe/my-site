@@ -3,7 +3,8 @@ import IWorkExperienceModel from "../../models/work-experience-model";
 import styles from '../../../styles/Home.module.css'
 import React, { useState } from 'react';
 import CollapsableButton, { ICollapsableButtonProps } from '../common/collapsable-button';
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
+import '../../extensions/string-extensions'
 
 export const WorkExperience = (props: IWorkExperienceModel) => {
     const { t } = useTranslation();

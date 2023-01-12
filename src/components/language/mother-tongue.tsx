@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import '../../extensions/string-extensions'
 
 export interface IMotherTongueProps {
     languageName: string
