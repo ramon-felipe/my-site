@@ -14,7 +14,7 @@ const MenuNav = (): JSX.Element => {
             variant="light" 
             bg="light" 
             sticky="top"
-            className="pb-0"
+            className="shadow"
         >            
             <Container fluid  className="justify-content-end">
                 <Navbar.Toggle onClick={() => setExpanded(!expanded)} aria-controls="responsive-navbar-nav"/>                

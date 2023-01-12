@@ -57,6 +57,22 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
         )
     }
 
+    const showCollapsedDetails = (): JSX.Element => {
+        return (
+            <>
+                <div className="d-none d-md-inline d-xl-none ms-2" style={{fontSize:'1rem'}}>
+                    ({ companyDetails() })
+                </div>
+                <div className="d-none d-xl-inline d-xxl-none ms-2" style={{fontSize:'1rem'}}>
+                    ({ companyDetails() } | { fromToDetails() })
+                </div>
+                <div className="d-none d-xxl-inline ms-2" style={{fontSize:'1rem'}}>
+                    ({ companyDetails() } | { fromToDetails() } | { addressDetail() })
+                </div>
+            </>
+        )
+    }
+
     const experienceDetails = (): JSX.Element => {
         return (
             <div className="pb-2">                
@@ -89,13 +105,8 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
             </Col>
             <Col>
                 <div className="pt-2 mb-2" style={{fontSize:'2rem'}}>                    
-                    {t('role').UpperCaseFirstLetter()}: <h3 className='d-inline'>{t(role).UpperCaseFirstLetter()}</h3>
-                    { 
-                        !open && 
-                        <div className="d-inline ms-2" style={{fontSize:'1rem'}}>
-                            ({ companyDetails() } | { fromToDetails() } | { addressDetail() })
-                        </div>
-                    }
+                    { t('role').UpperCaseFirstLetter()}: <h3 className='d-inline'>{t(role).UpperCaseFirstLetter() }</h3>
+                    { !open && showCollapsedDetails() }
                 </div>
                 <Collapse in={open}>
                     { experienceDetails() }
