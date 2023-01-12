@@ -5,6 +5,7 @@ import ILanguageSkillRateModel from "../../models/language-skill-rate-model";
 import ILanguageSkillsModel from "../../models/language-skills-models";
 import { nameof } from "../../utils/utils-common";
 import { LanguageSkillRate } from "./language-skill-rate";
+import '../../extensions/string-extensions'
 
 export interface LanguageSkillRateProps {
     skillName: string,

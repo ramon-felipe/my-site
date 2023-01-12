@@ -4,6 +4,7 @@ import styles from '../../../styles/Home.module.css'
 import digitalSkillsData from '../../data/digital-skills-data'
 import IDigitalSkillModel from '../../models/digital-skills-model';
 import { writeRate } from '../../utils/rate-utils';
+import '../../extensions/string-extensions'
 
 const DigitalSkillsSection = (): JSX.Element => {
     const { t } = useTranslation();
