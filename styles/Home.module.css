@@ -182,7 +182,8 @@
 /* Mobile */
 @media (max-width: 576px) {
   .main {
-    margin: 0 0;
+    margin: 0;
+    padding: 0;
   }
 
   .content {
@@ -263,7 +264,8 @@
 /* Tablet and Smaller Desktop */
 @media (min-width: 577px) and (max-width: 1120px) {
   .main {
-    margin: 0 2rem;
+    margin: 0;
+    padding: 0;
   }
 
   .grid {
