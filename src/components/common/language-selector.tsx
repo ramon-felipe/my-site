@@ -1,12 +1,15 @@
 import React from "react";
 import Flags from 'country-flag-icons/react/3x2'
 import { useTranslation } from "react-i18next";
+import moment from "moment";
+import '../../../public/locales/pt/pt'
 
 const LanguageSelector = (): JSX.Element => {
     const { i18n } = useTranslation();
 
     const handleLanguageChange = (l: string): void => {
         i18n.changeLanguage(l)
+        moment.locale(l)
     }
 
     return (
