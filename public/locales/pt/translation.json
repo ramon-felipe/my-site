@@ -46,5 +46,11 @@
     "unit-test": "teste unitário",
     "oop": "poo",
     "design-patterns": "padrões de projeto",
-    "current": "atual"
+    "current": "atual",
+    "no-knowledge": "sem conhecimento",
+    "not-good": "conheço bem pouco",
+    "now-a-bit": "conheço pouco",
+    "good": "bom",
+    "very-good": "muito bom",
+    "excellent": "excelente"
 }

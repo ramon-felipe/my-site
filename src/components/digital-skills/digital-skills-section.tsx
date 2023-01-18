@@ -1,10 +1,12 @@
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, OverlayTrigger } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next';
 import styles from '../../../styles/Home.module.css'
 import digitalSkillsData from '../../data/digital-skills-data'
 import IDigitalSkillModel from '../../models/digital-skills-model';
-import { writeRate } from '../../utils/rate-utils';
+import { getRateText, writeRateWithIcons } from '../../utils/rate-utils';
 import '../../extensions/string-extensions'
+import React from 'react';
+import TriggerTooltip from '../common/overlay-trigger';
 
 const DigitalSkillsSection = (): JSX.Element => {
     const { t } = useTranslation();
@@ -23,7 +25,10 @@ const DigitalSkillsSection = (): JSX.Element => {
                         return (
                             <Col sm={4} md={3} key={i} className='p-2 m-2 border border-2'>
                                 <div className={styles.center}>{t(d.skillName).UpperCaseFirstLetter()}</div>
-                                <div className={styles.center}>{writeRate(d.rate)}</div>
+                                
+                                <TriggerTooltip text={t(getRateText(d.rate)).UpperCaseFirstLetter()}>
+                                    <div className={styles.center}>{writeRateWithIcons(d.rate)}</div>
+                                </TriggerTooltip>
                             </Col>
                         )
                     })
