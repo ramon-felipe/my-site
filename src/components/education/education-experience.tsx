@@ -5,6 +5,7 @@ import styles from '../../../styles/Home.module.css'
 import IEducationExperienceModel from '../../models/education-experience-model';
 import CollapsableButton, { ICollapsableButtonProps } from '../common/collapsable-button';
 import '../../extensions/string-extensions'
+import moment from 'moment';
 
 export const EducationExperience = (props: IEducationExperienceModel) => {
     const { t } = useTranslation();
@@ -18,14 +19,14 @@ export const EducationExperience = (props: IEducationExperienceModel) => {
     
     const schoolExperienceDetails = (): JSX.Element => {
         return (
-            <div>
-                <div>
-                    <h4>{t('course').UpperCaseFirstLetter()}: {t(course).UpperCaseFirstLetter()}</h4>
+            <div className="pb-2">
+                <div className="mb-2">
+                    {t('course').UpperCaseFirstLetter()}: <h4 className='d-inline'>{t(course).UpperCaseFirstLetter()}</h4>
                 </div>
-                <div>
-                    <h5>{t('from').UpperCaseFirstLetter()}: {from} {t('to').UpperCaseFirstLetter()}: {to}</h5>
+                <div className="mb-2">
+                    {t('from').UpperCaseFirstLetter()}: <h6 className='d-inline'>{moment(from).format('DD/MMMM/YYYY')}</h6 > {t('to').UpperCaseFirstLetter()}: <h6 className='d-inline'>{ !to ? t('current').UpperCaseFirstLetter() : moment(to).format('DD/MMMM/YYYY') }</h6>
                 </div>
-                <div>
+                <div className="mb-2">
                     <i className="bi bi-geo-alt-fill"></i> {t('address').UpperCaseFirstLetter()}: {address}
                 </div>
 
