@@ -20,7 +20,7 @@ const LanguageSkillsSection = (): JSX.Element => {
         return (
             <div className={styles.center}>
                 <div className='p-2 mb-2 w-75 border border-2'>
-                    <MotherTongue languageName={motherTongue.languageName.UpperCaseFirstLetter()}/>
+                    <MotherTongue languageName={motherTongue.languageName}/>
                 </div>
             </div>
         )

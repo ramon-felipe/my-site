@@ -46,5 +46,11 @@
     "unit-test": "unit test",
     "oop": "oop",
     "design-patterns": "design patterns",
-    "current": "current"
+    "current": "current",
+    "no-knowledge": "no knowledge",
+    "not-good": "almost no knowledge",
+    "now-a-bit": "know a bit",
+    "good": "good",
+    "very-good": "very good",
+    "excellent": "excellent"
 }

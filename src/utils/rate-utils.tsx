@@ -8,7 +8,7 @@ const adjustRateItemKey = (rate: JSX.Element[]): JSX.Element[] => {
     return rate;
 }
 
-const writeRate = (rateValue: number) => {
+const writeRateWithIcons = (rateValue: number) => {
     let rate: JSX.Element[] = [rateIconEmpty, rateIconEmpty, rateIconEmpty, rateIconEmpty, rateIconEmpty];
 
     for (let i = 0; i < rateValue; i++) {
@@ -18,4 +18,18 @@ const writeRate = (rateValue: number) => {
     return adjustRateItemKey(rate);
 };
 
-export { adjustRateItemKey, writeRate };
+const getRateText = (rateValue: number): string => {
+    let rateDesc = new Map<number, string>();
+    rateDesc.set(0, "no-knowledge");
+    rateDesc.set(1, "not-good");
+    rateDesc.set(2, "now-a-bit");
+    rateDesc.set(3, "good");
+    rateDesc.set(4, "very-good");
+    rateDesc.set(5, "excellent");
+
+    let result = rateDesc.get(rateValue);
+
+    return result || "";
+}
+
+export { adjustRateItemKey, writeRateWithIcons, getRateText };

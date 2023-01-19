@@ -8,8 +8,7 @@ export interface ICollapsableButtonProps {
 }
 
 const CollapsableButton = (props: ICollapsableButtonProps): JSX.Element => {
-    const { open, setOpen } = props;
-    
+    const { open, setOpen } = props;    
     const target = useRef(null);
 
     const handleOpen = () => {
@@ -32,7 +31,10 @@ const CollapsableButton = (props: ICollapsableButtonProps): JSX.Element => {
     }
 
     return (
-        <TriggerTooltip element={button()} text={open ? 'Hide details' : 'Show details'} />
+        <TriggerTooltip             
+            children={button()} 
+            text={open ? 'Hide details' : 'Show details'} 
+        />
     )
 }
 

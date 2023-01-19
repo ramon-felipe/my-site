@@ -13,7 +13,7 @@ const MotherTongue = (props: IMotherTongueProps) => {
         <div className='py-2'>
             {t('mother-tongue').UpperCaseFirstLetter(true)}:
             <div>
-                <h3>{t(props.languageName)}</h3>
+                <h3>{t(props.languageName).UpperCaseFirstLetter()}</h3>
             </div>
         </div>
     );
