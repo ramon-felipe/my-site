@@ -4,15 +4,25 @@ import IWorkExperienceModel from "../../models/work-experience-model";
 import { WorkExperience } from './work-experience';
 import { useTranslation, Trans } from 'react-i18next'
 import '../../extensions/string-extensions'
+import useDateHelper from '../../hooks/useDateHelper';
 
 const WorkExperienceSection = (): JSX.Element => {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
+    const dateHelper = useDateHelper();
     const workingExperiences: IWorkExperienceModel[] = workingExperienceData;
 
     return (
         <div className={styles.section} >
             <div className={styles.center}>
-                <h2 className={styles.center}>{t('work-experience').UpperCaseFirstLetter()}</h2>
+                <div>
+                    <h2 className="mb-0">
+                        {t('work-experience').UpperCaseFirstLetter()}
+                    </h2>                
+                    <div style={{justifyContent: 'center'}} className="d-flex">
+                        [ {dateHelper.writeTotalWorkExperienceTime()} total ]
+                    </div>
+
+                </div>
             </div>
             {
                 workingExperiences.map((w, index) =>                    

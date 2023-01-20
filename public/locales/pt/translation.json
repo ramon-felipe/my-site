@@ -52,5 +52,12 @@
     "now-a-bit": "conheço pouco",
     "good": "bom",
     "very-good": "muito bom",
-    "excellent": "excelente"
+    "excellent": "excelente",
+    "brazil": "brasil",
+    "date":
+    { 
+        "years": "ano(s)",
+        "months": "mes(es)",
+        "days": "dia(s)"
+    }
 }

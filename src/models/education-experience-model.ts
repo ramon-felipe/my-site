@@ -1,8 +1,8 @@
-export default interface IEducationExperienceModel {
+import IFromToModel from "./from-to-model";
+
+export default interface IEducationExperienceModel extends IFromToModel {
     school: string;
     course: string;
-    from: string;
-    to: string;
     address: string;
     webPage: string;
 }
