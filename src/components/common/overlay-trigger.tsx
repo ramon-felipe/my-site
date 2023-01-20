@@ -5,8 +5,8 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip, { TooltipProps } from 'react-bootstrap/Tooltip';
 
 interface ITriggerExampleProps {
-    children: JSX.Element
     text: string
+    children: JSX.Element
     placement?: Placement    
 }
 
