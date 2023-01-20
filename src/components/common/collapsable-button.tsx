@@ -31,10 +31,11 @@ const CollapsableButton = (props: ICollapsableButtonProps): JSX.Element => {
     }
 
     return (
-        <TriggerTooltip             
-            children={button()} 
+        <TriggerTooltip                         
             text={open ? 'Hide details' : 'Show details'} 
-        />
+        >
+            {button()}
+        </TriggerTooltip>
     )
 }
 
