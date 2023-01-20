@@ -27,17 +27,17 @@ moment.locale('pt', {
     relativeTime : {
         future : 'dans %s',
         past : 'il y a %s',
-        s : 'quelques secondes',
-        m : 'une minute',
-        mm : '%d minutes',
-        h : 'une heure',
-        hh : '%d heures',
-        d : 'un jour',
-        dd : '%d jours',
-        M : 'un mois',
-        MM : '%d mois',
-        y : 'un an',
-        yy : '%d ans'
+        s : 'poucos segundos',
+        m : 'um minuto',
+        mm : '%d minutos',
+        h : 'uma hora',
+        hh : '%d horas',
+        d : 'um dia',
+        dd : '%d dias',
+        M : 'um mês',
+        MM : '%d meses',
+        y : 'um ano',
+        yy : '%d anos'
     },
     dayOfMonthOrdinalParse : /\d{1,2}(er|e)/,
     ordinal : function (number) {
@@ -56,7 +56,7 @@ moment.locale('pt', {
         return hours < 12 ? 'PD' : 'MD';
     },
     week : {
-        dow : 1, // Monday is the first day of the week.
+        dow : 0, // Sunday is the first day of the week.
         doy : 4  // Used to determine first week of the year.
     }
 });

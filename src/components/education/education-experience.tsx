@@ -5,6 +5,7 @@ import styles from '../../../styles/Home.module.css'
 import IEducationExperienceModel from '../../models/education-experience-model';
 import CollapsableButton, { ICollapsableButtonProps } from '../common/collapsable-button';
 import '../../extensions/string-extensions'
+import FromToDetails from '../common/from-to';
 
 export const EducationExperience = (props: IEducationExperienceModel) => {
     const { t } = useTranslation();
@@ -18,14 +19,14 @@ export const EducationExperience = (props: IEducationExperienceModel) => {
     
     const schoolExperienceDetails = (): JSX.Element => {
         return (
-            <div>
-                <div>
-                    <h4>{t('course').UpperCaseFirstLetter()}: {t(course).UpperCaseFirstLetter()}</h4>
+            <div className="pb-2">
+                <div className="mb-2">
+                    {t('course').UpperCaseFirstLetter()}: <h4 className='d-inline'>{t(course).UpperCaseFirstLetter()}</h4>
                 </div>
-                <div>
-                    <h5>{t('from').UpperCaseFirstLetter()}: {from} {t('to').UpperCaseFirstLetter()}: {to}</h5>
+                <div className="mb-2">
+                    { <FromToDetails {...props} /> }
                 </div>
-                <div>
+                <div className="mb-2">
                     <i className="bi bi-geo-alt-fill"></i> {t('address').UpperCaseFirstLetter()}: {address}
                 </div>
 
