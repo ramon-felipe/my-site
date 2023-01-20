@@ -5,11 +5,11 @@ import React, { useState } from 'react';
 import CollapsableButton, { ICollapsableButtonProps } from '../common/collapsable-button';
 import { useTranslation } from 'react-i18next'
 import '../../extensions/string-extensions'
-import moment from 'moment';
+import FromToDetails from '../common/from-to';
 
 export const WorkExperience = (props: IWorkExperienceModel) => {
-    const { t, i18n } = useTranslation();
-    const { role, company, from, to, city, country, job_description_i18n: job_description, webpage } = props;
+    const { t } = useTranslation();
+    const { role, company, city, country, job_description_i18n: job_description, webpage } = props;
     const [open, setOpen] = useState(true);
 
     const collapsableButtonProps: ICollapsableButtonProps = {
@@ -35,21 +35,6 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
         )
     }
 
-    const fromToDetails = (): JSX.Element => {
-        return (
-            <>
-                {t('from').UpperCaseFirstLetter()}
-                : <h6 className='d-inline'>
-                    { moment(from).format('DD/MMMM/YYYY') }  
-                </h6> {t('to').UpperCaseFirstLetter()}
-
-                <h6 className='d-inline'>
-                    : { !to ? t('current').UpperCaseFirstLetter() : moment(to).format('DD/MMMM/YYYY') }
-                </h6>
-            </>
-        )
-    }
-
     const addressDetail = (): JSX.Element => {
         return (
             <>
@@ -67,10 +52,10 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
                     ({ companyDetails() })
                 </div>
                 <div className="d-none d-sm-inline d-lg-none ms-2" style={{fontSize:'1rem'}}>
-                    ({ companyDetails() } | { fromToDetails() })
+                    ({ companyDetails() } | { <FromToDetails {...props} /> })
                 </div>
                 <div className="d-none d-lg-inline ms-2" style={{fontSize:'1rem'}}>
-                    ({ companyDetails() } | { fromToDetails() } | { addressDetail() })
+                    ({ companyDetails() } | { <FromToDetails {...props} /> } | { addressDetail() })
                 </div>
             </div>
         )
@@ -83,7 +68,7 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
                     { companyDetails() }
                 </div>
                 <div className="mb-2">
-                    { fromToDetails() }
+                    { <FromToDetails {...props} /> }
                 </div>
                 <div className="mb-2">
                     { addressDetail() }
@@ -111,7 +96,7 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
                     { t('role').UpperCaseFirstLetter()}: <h3 className='d-inline'>{t(role).UpperCaseFirstLetter() }</h3>
                 </div>
                 <Collapse in={(!open)}>
-                        {showCollapsedDetails()}
+                    {showCollapsedDetails()}
                 </Collapse>
                 <Collapse in={open}>
                     { experienceDetails() }

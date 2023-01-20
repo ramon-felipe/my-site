@@ -5,7 +5,7 @@ import styles from '../../../styles/Home.module.css'
 import IEducationExperienceModel from '../../models/education-experience-model';
 import CollapsableButton, { ICollapsableButtonProps } from '../common/collapsable-button';
 import '../../extensions/string-extensions'
-import moment from 'moment';
+import FromToDetails from '../common/from-to';
 
 export const EducationExperience = (props: IEducationExperienceModel) => {
     const { t } = useTranslation();
@@ -24,7 +24,7 @@ export const EducationExperience = (props: IEducationExperienceModel) => {
                     {t('course').UpperCaseFirstLetter()}: <h4 className='d-inline'>{t(course).UpperCaseFirstLetter()}</h4>
                 </div>
                 <div className="mb-2">
-                    {t('from').UpperCaseFirstLetter()}: <h6 className='d-inline'>{moment(from).format('DD/MMMM/YYYY')}</h6 > {t('to').UpperCaseFirstLetter()}: <h6 className='d-inline'>{ !to ? t('current').UpperCaseFirstLetter() : moment(to).format('DD/MMMM/YYYY') }</h6>
+                    { <FromToDetails {...props} /> }
                 </div>
                 <div className="mb-2">
                     <i className="bi bi-geo-alt-fill"></i> {t('address').UpperCaseFirstLetter()}: {address}

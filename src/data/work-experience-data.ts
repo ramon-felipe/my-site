@@ -6,8 +6,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         company: "BTG Pactual",
         from: new Date("06/01/2021"),
         to: undefined,
-        city: "são Paulo",
-        country: "brasil",
+        city: "são paulo",
+        country: "brazil",
         job_description_i18n: "btg",
         webpage: "https://www.btgpactual.com/"
     },
@@ -16,8 +16,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         company: "Santander",
         from: new Date("01/01/2020"),
         to: new Date("05/01/2021"),
-        city: "são Paulo",
-        country: "brasil",
+        city: "são paulo",
+        country: "brazil",
         job_description_i18n: "emdia",
         webpage: "https://euemdia.com.br/"
     },
@@ -26,8 +26,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         company: "Bizapp",
         from: new Date("10/01/2018"),
         to: new Date("12/01/2019"),
-        city: "são Paulo",
-        country: "brasil",
+        city: "são paulo",
+        country: "brazil",
         job_description_i18n: "bizzap",
         webpage: "https://bizapp.com.br/"
     },
@@ -36,8 +36,8 @@ const workingExperienceData: IWorkExperienceModel[] = [
         company: "HDI Group",
         from: new Date("04/01/2018"),
         to: new Date("10/01/2018"),
-        city: "são Paulo",
-        country: "brasil",
+        city: "são paulo",
+        country: "brazil",
         job_description_i18n: "hdi",
         webpage: "https://grupohdi.com/"
     },
@@ -47,7 +47,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         from: new Date("01/01/2012"),
         to: new Date("07/01/2012"),
         city: "são paulo",
-        country: "brasil",
+        country: "brazil",
         job_description_i18n: "edok",
         webpage: "https://www.edok.com.br/#/"
     },
@@ -57,7 +57,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         from: new Date("01/01/2009"),
         to: new Date("12/01/2010"),
         city: "são paulo",
-        country: "brasil",
+        country: "brazil",
         job_description_i18n: "sec_sports",
         webpage: "https://www.prefeitura.sp.gov.br/cidade/secretarias/esportes/"
     }
