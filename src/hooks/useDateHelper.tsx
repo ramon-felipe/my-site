@@ -16,11 +16,8 @@ const useDateHelper = () => {
 
             totalTime += diff.asMilliseconds();
         });
-        console.log('totalTime', totalTime)
 
         let x = moment.duration(totalTime);
-
-        console.log('x', x)
 
         return writeDuration(x);
     }
