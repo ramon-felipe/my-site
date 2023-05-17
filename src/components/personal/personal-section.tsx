@@ -42,7 +42,7 @@ const PersonalSection = (): JSX.Element => {
 
     const email = (): JSX.Element => {
         return (
-            <Col className={styles.center} sm={12} md={5} xl={3}>
+            <Col className={styles.center} sm={12} md={6} lg={4} xl={3} xxl={3}>
                 <a href="mailto:ramon.felipe@hotmail.com?subject=Contato">
                     { svgIcons.mailAtIcon(mailIconStyle) }
                     <span className='ps-2'>ramon.felipe@hotmail.com</span>
@@ -53,7 +53,7 @@ const PersonalSection = (): JSX.Element => {
 
     const wpp = (): JSX.Element => {
         return (
-            <Col className={styles.center} sm={12} md={5} xl={3}>
+            <Col className={styles.center} sm={12} md={6} lg={3} xl={3} xxl={2}>
                 <a href="https://api.whatsapp.com/send?phone=5511934204993" target='_blank' rel="noreferrer">
                     { svgIcons.wppIcon(wppIconStyle) }
                     <span className='ps-2'>+55 11 93420 4993</span>
@@ -64,7 +64,7 @@ const PersonalSection = (): JSX.Element => {
 
     const medium = (): JSX.Element => {
         return (
-            <Col className={styles.center} sm={12} md={6} xl={3}>
+            <Col className={styles.center} sm={12} md={6} lg={4} xl={4} xxl={3}>
                 <a href="https://medium.com/@ramon_arruda_it" target='_blank' rel="noreferrer">
                     { svgIcons.mediumIcon() }
                     <span className='ps-2 d-none d-sm-inline'>medium.com/@ramon_arruda_it</span>
@@ -76,11 +76,23 @@ const PersonalSection = (): JSX.Element => {
 
     const linkedin = (): JSX.Element => {
         return (
-            <Col className={styles.center} sm={12} md={6} xl={3}>
+            <Col className={styles.center} sm={12} md={6} lg={4} xl={4} xxl={3}>
                 <a href="https://www.linkedin.com/in/ramonarruda-it/" target='_blank' rel="noreferrer">
                     { svgIcons.linkedinIcon(linkedinIconStyle) }
                     <span className='ps-2 d-none d-sm-inline'>linkedin.com/in/ramonarruda-it</span>
                     <span className='ps-2 d-sm-none'>ramonarruda-it</span>
+                </a>
+            </Col>  
+        )
+    }
+
+    const github = (): JSX.Element => {
+        return (
+            <Col className={styles.center} sm={12} md={6} lg={4} xl={3} xxl={3}>
+                <a href="https://github.com/ramon-felipe" target='_blank' rel="noreferrer">
+                    { svgIcons.githubIcon() }
+                    <span className='ps-2 d-none d-sm-inline'>github.com/ramon-felipe</span>
+                    <span className='ps-2 d-sm-none'>ramon-felipe</span>
                 </a>
             </Col>  
         )
@@ -110,10 +122,11 @@ const PersonalSection = (): JSX.Element => {
                 { gender() }
                 { nationality() }
                 <Row className={styles.center}>
-                    { email() }
-                    { wpp() }
+                    { github() }
                     { medium() }
                     { linkedin() }
+                    { email() }
+                    { wpp() }
                 </Row>
             </Row>
 
