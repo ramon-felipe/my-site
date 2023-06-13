@@ -102,10 +102,10 @@ const PersonalSection = (): JSX.Element => {
         <>
             <div className={styles.center}>
                     <Image 
-                        src="/images/Ramon_no_background_.png" 
-                        alt="me"
+                        src='/images/profile-pic.webp'
+                        alt="Author profile picture"
                         width="150"
-                        height="auto"
+                        height="150"
                         className="py-2 img-thumbnail"
                         roundedCircle
                         fluid
