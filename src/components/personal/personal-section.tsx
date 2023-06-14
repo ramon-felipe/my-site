@@ -1,4 +1,4 @@
-import Image from 'react-bootstrap/Image'
+import Image from 'next/image'
 import React, { useRef } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import styles from '../../../styles/Home.module.css'
@@ -102,13 +102,12 @@ const PersonalSection = (): JSX.Element => {
         <>
             <div className={styles.center}>
                     <Image 
-                        src='/images/profile-pic.webp'
+                        src='/images/profile-pic-medium.webp'
                         alt="Author profile picture"
                         width="150"
-                        height="150"
-                        className="py-2 img-thumbnail"
-                        roundedCircle
-                        fluid
+                        height="150"                        
+                        className="py-2 img-thumbnail img-fluid rounded-circle"
+                        priority           
                         ref={imageRef}
                     />
             </div>
