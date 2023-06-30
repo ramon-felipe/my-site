@@ -52,11 +52,13 @@ const PersonalSection = (): JSX.Element => {
     }
 
     const wpp = (): JSX.Element => {
+        let phoneNumber = '351 912 070 516'
+
         return (
             <Col className={styles.center} sm={12} md={6} lg={3} xl={3} xxl={2}>
-                <a href="https://api.whatsapp.com/send?phone=5511934204993" target='_blank' rel="noreferrer">
+                <a href={`https://api.whatsapp.com/send?phone=${phoneNumber.replaceAll(' ','')}`} target='_blank' rel="noreferrer">
                     { svgIcons.wppIcon(wppIconStyle) }
-                    <span className='ps-2'>+55 11 93420 4993</span>
+                    <span className='ps-2'>+{phoneNumber}</span>
                 </a>
             </Col>
         )
