@@ -42,6 +42,26 @@ const workingExperienceData: IWorkExperienceModel[] = [
         webpage: "https://grupohdi.com/"
     },
     {
+        role: "oracle-retail-consultant",
+        company: "Logic Informations Systems",
+        from: new Date("07/01/2014"),
+        to: new Date("03/01/2018"),
+        city: "são paulo",
+        country: "brazil",
+        job_description_i18n: "logic-info",
+        webpage: "https://logicinfo.com/"
+    },
+    {
+        role: "sap-crm-consultant",
+        company: "Accenture",
+        from: new Date("08/01/2012"),
+        to: new Date("07/01/2014"),
+        city: "são paulo",
+        country: "brazil",
+        job_description_i18n: "accenture",
+        webpage: "https://www.accenture.com/gb-en"
+    },
+    {
         role: "software_developer",
         company: "eDok",
         from: new Date("01/01/2012"),

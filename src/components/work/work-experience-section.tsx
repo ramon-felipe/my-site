@@ -15,7 +15,7 @@ const WorkExperienceSection = (): JSX.Element => {
         <div className={styles.section} >
             <div className={styles.center}>
                 <div>
-                    <h2 className="mb-0">
+                    <h2 className={styles.section_title}>
                         {t('work-experience').UpperCaseFirstLetter()}
                     </h2>                
                     <div style={{justifyContent: 'center'}} className="d-flex">

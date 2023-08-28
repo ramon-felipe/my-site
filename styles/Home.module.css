@@ -87,6 +87,7 @@
   padding-top: 1rem;
 }
 
+.section_title,
 .center {
   display: flex;
   justify-content: center;
@@ -95,6 +96,12 @@
   padding: 1rem 0;
 }
 
+.section_title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section_title::before,
 .center::before {
   /* background: var(--secondary-glow); */
   border-radius: 50%;
@@ -103,6 +110,7 @@
   margin-left: -400px;
 }
 
+.section_title::after,
 .center::after {
   /* background: var(--primary-glow); */
   width: 240px;
