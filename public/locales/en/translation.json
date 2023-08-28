@@ -9,6 +9,8 @@
     "backend_developer": "backend developer",
     "test_engineer": "test engineer",
     "software_developer": "software developer",
+    "oracle-retail-consultant": "Oracle Retail Consultant",
+    "sap-crm-consultant": "SAP CRM Consultant",
     "company": "company",
     "seme": "Municipal Department of Sports",
     "from": "from",
@@ -21,6 +23,8 @@
         "emdia": "emDia is a Santander Bank company. Its objective is offer clients an economic way to pay their debts by giving them good discounts. At first I worked as a senior test automation developer in QA area. But shortly (one month later), I started working as a software developer creating Web APIs using the .Net C# language. These web APIs consumed a public API to get clients financial informations. Dapper was used as the ORM. I also performed the maintenance of a broker system developed in Node and TypeScript that used some AWS technologies (Amazon Web Services), such as: API Gateway, Lambda; S3; Dynamo; Cloudwatch, SNS. I Also helped the company emDia to implement a chatbot (IBM Watson) on its webpage; Creating chatbot dialogs that consumed the Web APIs I had created before.",
         "bizzap": "Working allocated in a client site (CIP - Interbank Payment Chamber) at Faria Lima - SP, automating functional tests using C#, Selenium and BDD (Specflow). Developing web interface tests integrated with extent reports (which generates report results with screenshots after test completion). SCRUM was used as the agile methodology.",
         "hdi": "HDI Group is a company specialized in test automation. My role was QA automation developer. My main job was about creating automated tests for the UI Web solutions of our clients (a variaty of clients like retail and insurance companies). The test automation was done using Java, so at the same time I was developing the tests I learned a lot about TDD, OOP, Java, Selenium and Git. I worked in a team with more or less 10 people from the QA area (manual analists and test developers).",
+        "logic-info": "I worked at first in the ORMS (Oracle Retail Merchadising System) support team, maintening already existent systems. Basically, the job was analysing data, write shell scripts, and write PL/SQL procedures. After, I became part of \"projects team\", traveling to some clients in Brazil for implementing new projects. During this experience I had the opportunity to work with BI Publisher and RDF Module (Oracel Retail Demand Forecasting).",
+        "accenture": "Support team, Answering emails and calls for the CRM (Customer Relationship Management) module of the SAP ISU/CCS platform.",
         "edok": "My second internship as a software developer (total of 2 years of internship). Edok is a startup that digitalizes phisical documents. It was my very first contact with an OOP programming language (PHP). I learned the basics of this language from the seniores of the project. I helped the team by giving support and developing basic to intermediate functions using the PHP programming language. The team was me and four seniores developers.",
         "sec_sports": "It was my first internship working as a software developer. I used to work four hours a day during the week giving support and developing basic methods/functions using the VB.net programming language. I started leaning better the usage of data structure such asArrays and loops such as While and For."
     },

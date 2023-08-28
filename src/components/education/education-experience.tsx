@@ -41,8 +41,8 @@ export const EducationExperience = (props: IEducationExperienceModel) => {
     }
 
     return (
-        <Row>
-            <Col xs={1}>
+        <Row className='pe-3 pe-sm-5'>
+            <Col className='pt-3 px-2' xs={1}>
                 <div className={styles.right}>
                     <CollapsableButton {...collapsableButtonProps} />
                 </div>
