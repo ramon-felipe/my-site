@@ -8,7 +8,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: undefined,
         city: "são paulo",
         country: "brazil",
-        job_description_i18n: "btg",
+        jobDescription: "btg",
         webpage: "https://www.btgpactual.com/"
     },
     {
@@ -18,7 +18,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: new Date("05/01/2021"),
         city: "são paulo",
         country: "brazil",
-        job_description_i18n: "emdia",
+        jobDescription: "emdia",
         webpage: "https://euemdia.com.br/"
     },
     {
@@ -28,7 +28,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: new Date("12/01/2019"),
         city: "são paulo",
         country: "brazil",
-        job_description_i18n: "bizzap",
+        jobDescription: "bizzap",
         webpage: "https://bizapp.com.br/"
     },
     {
@@ -38,7 +38,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: new Date("10/01/2018"),
         city: "são paulo",
         country: "brazil",
-        job_description_i18n: "hdi",
+        jobDescription: "hdi",
         webpage: "https://grupohdi.com/"
     },
     {
@@ -48,7 +48,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: new Date("03/01/2018"),
         city: "são paulo",
         country: "brazil",
-        job_description_i18n: "logic-info",
+        jobDescription: "logic-info",
         webpage: "https://logicinfo.com/"
     },
     {
@@ -58,7 +58,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: new Date("07/01/2014"),
         city: "são paulo",
         country: "brazil",
-        job_description_i18n: "accenture",
+        jobDescription: "accenture",
         webpage: "https://www.accenture.com/gb-en"
     },
     {
@@ -68,7 +68,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: new Date("07/31/2012"),
         city: "são paulo",
         country: "brazil",
-        job_description_i18n: "edok",
+        jobDescription: "edok",
         webpage: "https://www.edok.com.br/#/"
     },
     {
@@ -78,7 +78,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         to: new Date("07/01/2010"),
         city: "são paulo",
         country: "brazil",
-        job_description_i18n: "sec_sports",
+        jobDescription: "sec_sports",
         webpage: "https://www.prefeitura.sp.gov.br/cidade/secretarias/esportes/"
     }
 ]

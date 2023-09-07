@@ -9,7 +9,7 @@ import FromToDetails from '../common/from-to';
 
 export const WorkExperience = (props: IWorkExperienceModel) => {
     const { t } = useTranslation();
-    const { role, company, city, country, job_description_i18n: job_description, webpage } = props;
+    const { role, company, city, country, jobDescription, webpage } = props;
     const [open, setOpen] = useState(true);
 
     const collapsableButtonProps: ICollapsableButtonProps = {
@@ -78,7 +78,8 @@ export const WorkExperience = (props: IWorkExperienceModel) => {
 
                 <div>
                     <span><b>{t('description').UpperCaseFirstLetter()}</b></span>
-                    <p>{t(`job_description.${job_description}`)}</p>
+                    <p>{jobDescription}</p>
+                    {/* <p>{t(`job_description.${job_description}`)}</p> */}
                 </div>
             </div>
         )

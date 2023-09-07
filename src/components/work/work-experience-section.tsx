@@ -5,11 +5,45 @@ import { WorkExperience } from './work-experience';
 import { useTranslation, Trans } from 'react-i18next'
 import '../../extensions/string-extensions'
 import useDateHelper from '../../hooks/useDateHelper';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import useDomainService from '../../hooks/useApiService';
 
 const WorkExperienceSection = (): JSX.Element => {
     const { t } = useTranslation();
     const dateHelper = useDateHelper();
+    const domainService = useDomainService();
     const workingExperiences: IWorkExperienceModel[] = workingExperienceData;
+    const [workXps, setWorkXps] = useState<IWorkExperienceModel[]>();
+
+    useEffect(() => {
+        getWorkExperience();
+    }, []);
+
+    const getWorkExperience = async () => {
+        let workExp = await domainService.getWorkExperience();
+
+        setWorkXps(workExp)
+        // axios.get('https://localhost:7254/WorkExperience').then(response => {
+        //     setWorkXps(response.data);
+        // })
+    }
+
+    const writeWorkXps = (): JSX.Element => {
+        return (
+            <>
+            {
+                workXps?.map((w, index) =>
+                (
+                    <div key={index}>
+                        <WorkExperience {...w}/>
+                    </div>
+                )
+            )
+                }
+            </>
+        )
+    }
 
     return (
         <div className={styles.section} >
@@ -25,13 +59,7 @@ const WorkExperienceSection = (): JSX.Element => {
                 </div>
             </div>
             {
-                workingExperiences.map((w, index) =>                    
-                    (
-                        <div key={index}>
-                            <WorkExperience {...w}/>
-                        </div>
-                    )
-                )
+                writeWorkXps()
             }
             <div className='mt-4'>
                 <hr/>

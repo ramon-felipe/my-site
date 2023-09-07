@@ -5,7 +5,7 @@ export default interface IWorkExperienceModel extends IFromToModel {
     company: string,
     city: string, 
     country: string,
-    job_description_i18n: string,
+    jobDescription: string,
     webpage: string
 }
 
