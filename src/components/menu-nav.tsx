@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Container, Nav, Navbar, Row } from "react-bootstrap";
 import LanguageSelector from "./common/language-selector";
+import { LanguageContext } from "../contexts/languageContext";
 
 const MenuNav = (): JSX.Element => {
     const [expanded, setExpanded] = useState(false);
