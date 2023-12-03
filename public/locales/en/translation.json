@@ -26,7 +26,8 @@
         "logic-info": "I worked at first in the ORMS (Oracle Retail Merchadising System) support team, maintening already existent systems. Basically, the job was analysing data, write shell scripts, and write PL/SQL procedures. After, I became part of \"projects team\", traveling to some clients in Brazil for implementing new projects. During this experience I had the opportunity to work with BI Publisher and RDF Module (Oracel Retail Demand Forecasting).",
         "accenture": "Support team, Answering emails and calls for the CRM (Customer Relationship Management) module of the SAP ISU/CCS platform.",
         "edok": "My second internship as a software developer (total of 2 years of internship). Edok is a startup that digitalizes phisical documents. It was my very first contact with an OOP programming language (PHP). I learned the basics of this language from the seniores of the project. I helped the team by giving support and developing basic to intermediate functions using the PHP programming language. The team was me and four seniores developers.",
-        "sec_sports": "It was my first internship working as a software developer. I used to work four hours a day during the week giving support and developing basic methods/functions using the VB.net programming language. I started leaning better the usage of data structure such asArrays and loops such as While and For."
+        "sec_sports": "It was my first internship working as a software developer. I used to work four hours a day during the week giving support and developing basic methods/functions using the VB.net programming language. I started leaning better the usage of data structure such asArrays and loops such as While and For.",
+        "byggfakta": "As a backend developer at Byggfakta (A swedish leading software and information company within the construction industry), I am helping the team in modernizing the technology stack inthe migration of legacy PHP applications to .NET 8 C# systems.\nI am basically responsible for creating Restfull endpoints that performs CRUD operations, keep the code easy to understand, highly maintainable by using clean code and SOLID principles, design patterns, and high code coverage by creating unit tests, which drastically reduces the number of potencial bugs, and time for solving any problem. Technologies involved: .NET 8 C#, EF Core as ORM, Azure SQL Server Database, Git, Azure devops. We work under the SCRUM methodology with two weeks sprints, and english is widely used in our meetings."
     },
     "uninove": "university nove de julho",
     "science_computer": "science computer bachelor",
@@ -58,6 +59,7 @@
     "very-good": "very good",
     "excellent": "excellent",
     "brazil": "brazil",
+    "lisbon": "Lisbon",
     "date":
     { 
         "years": "year(s)",
