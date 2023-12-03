@@ -7,7 +7,7 @@ const workingExperienceData: IWorkExperienceModel[] = [
         from: new Date("06/01/2023"),
         to: undefined,
         city: "lisbon",
-        country: "brazil",
+        country: "portugal",
         job_description_i18n: "byggfakta",
         webpage: "https://www.aubay.pt/"
     },
