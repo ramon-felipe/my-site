@@ -1,32 +1,28 @@
 import styles from '../../../styles/Home.module.css'
-import workingExperienceData from '../../data/work-experience-data'
 import IWorkExperienceModel from "../../models/work-experience-model";
 import { WorkExperience } from './work-experience';
-import { useTranslation, Trans } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import '../../extensions/string-extensions'
 import useDateHelper from '../../hooks/useDateHelper';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import useDomainService from '../../hooks/useApiService';
+import { LanguageContext } from '../../contexts/languageContext';
 
 const WorkExperienceSection = (): JSX.Element => {
     const { t } = useTranslation();
     const dateHelper = useDateHelper();
     const domainService = useDomainService();
-    const workingExperiences: IWorkExperienceModel[] = workingExperienceData;
     const [workXps, setWorkXps] = useState<IWorkExperienceModel[]>();
+    const { setLang, lang } = useContext(LanguageContext);
 
     useEffect(() => {
         getWorkExperience();
-    }, []);
+    }, [lang]);
 
     const getWorkExperience = async () => {
-        let workExp = await domainService.getWorkExperience();
+        let workExp = await domainService.getWorkExperience(lang);
 
         setWorkXps(workExp)
-        // axios.get('https://localhost:7254/WorkExperience').then(response => {
-        //     setWorkXps(response.data);
-        // })
     }
 
     const writeWorkXps = (): JSX.Element => {
@@ -38,9 +34,8 @@ const WorkExperienceSection = (): JSX.Element => {
                     <div key={index}>
                         <WorkExperience {...w}/>
                     </div>
-                )
-            )
-                }
+                ))
+            }
             </>
         )
     }

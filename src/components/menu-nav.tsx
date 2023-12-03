@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Nav, Navbar, Row } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import LanguageSelector from "./common/language-selector";
 
 const MenuNav = (): JSX.Element => {
