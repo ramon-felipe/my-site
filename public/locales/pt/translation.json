@@ -26,7 +26,8 @@
         "logic-info": "Trabalhei inicialmente no time de suporte ao ORMS (Oracle Retail Merchadising System), mantendo sistemas já existentes. Basicamente, o trabalho era constituído em análise de dados, escrita de scripts em shell e criação de procedures em PL/SQL. Depois, passei a fazer parte do \"time de projetos\", viajando para alguns clientes no Brasil para implementação de novos projetos. Durante esta experiência tive a oportunidade de trabalhar com BI Publisher e com o Módulo RDF (Oracle Retail Demand Forecasting).",
         "accenture": "Equipe de suporte, respondendo e-mails e ligações pelo CRM (Relacionamento com o Cliente Management) da plataforma SAP ISU/CCS.",
         "edok": "Meu segundo estágio como desenvolvedor de software. A Edok é uma startup que digitaliza documentos físicos. Foi meu primeiro contato com uma linguagem de programação OOP (PHP). Aprendi o básico dessa linguagem com os seniores do projeto. Ajudei a equipe dando suporte e desenvolvendo funções básicas a intermediárias utilizando a linguagem de programação PHP. A equipe era composta por mim e outros quatro desenvolvedores seniores.",
-        "sec_sports": "Foi meu primeiro estágio trabalhando como desenvolvedor de software. Eu trabalhava quatro horas por dia durante a semana dando suporte e desenvolvendo funcionalidades básicas usando a linguagem de programação VB.net. Comecei a aprender melhor o uso de estrutura de dados como Arrays e loops como While e For, entre outros assuntos vistos durante ensino técnico e faculdade."
+        "sec_sports": "Foi meu primeiro estágio trabalhando como desenvolvedor de software. Eu trabalhava quatro horas por dia durante a semana dando suporte e desenvolvendo funcionalidades básicas usando a linguagem de programação VB.net. Comecei a aprender melhor o uso de estrutura de dados como Arrays e loops como While e For, entre outros assuntos vistos durante ensino técnico e faculdade.",
+        "byggfakta": "Como desenvolvedor backend no cliente Byggfakta (uma empresa sueca líder de software e informações no setor de construção), estou ajudando a equipa na modernização da stack de tecnologia na migração de sistemas PHP legados para sistemas .NET 8 com C#. Sou basicamente responsável por criar endpoints Restfull que executam operações CRUD, manter a qualidade, facilidade em ler e manter o código. Utilizando os princípios SOLID, design patterns, também incluindo uma alta cobertura do código por meio de unit tests, reduzindo drasticamente o número de potenciais bugs e tempo para solução de problemas. Tecnologias envolvidas: .NET 8 C#, EF Core como ORM, Azure SQL Server Database, Git, Azure devops. Trabalhamos sob a metodologia SCRUM, em sprints de duas semanas e o inglês é amplamente utilizado em nossas reuniões."
     },
     "uninove": "universidade nove de julho (UNINOVE)",
     "science_computer": "bacharelado em ciência da computação",
@@ -57,7 +58,9 @@
     "good": "bom",
     "very-good": "muito bom",
     "excellent": "excelente",
-    "brazil": "brasil",
+    "brazil": "Brasil",
+    "portugal": "Portugal",
+    "lisbon": "Lisboa",
     "date":
     { 
         "years": "ano(s)",
