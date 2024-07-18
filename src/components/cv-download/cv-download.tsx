@@ -15,7 +15,7 @@ const CvDownload = (): JSX.Element => {
                     text={t('download-cv')} 
                     placement="bottom"
                 >
-                    <a className="btn btn-secondary" href='https://drive.google.com/file/d/130_L9kRY_2qCicI8ZAmi2x10G6wmpS3c/view?usp=sharing' target="_blank">
+                    <a className="btn btn-secondary" href='https://drive.google.com/file/d/130_L9kRY_2qCicI8ZAmi2x10G6wmpS3c/view?usp=sharing' target="_blank" rel="noreferrer">
                         CV as PDF
                         <span className="ps-2">{arrowDown()}</span>
                     </a>
