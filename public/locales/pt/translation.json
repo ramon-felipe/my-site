@@ -66,5 +66,8 @@
         "years": "ano(s)",
         "months": "mes(es)",
         "days": "dia(s)"
-    }
+    },
+    "download-cv": "Salvar CV",
+    "hide": "esconder",
+    "details": "detalhes"
 }
