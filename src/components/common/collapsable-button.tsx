@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction, useRef, useState } from "react";
 import { Button, Collapse, Overlay } from "react-bootstrap";
 import TriggerTooltip from "./overlay-trigger";
+import { useTranslation } from "react-i18next";
 
 export interface ICollapsableButtonProps {
     open: boolean
@@ -10,6 +11,7 @@ export interface ICollapsableButtonProps {
 const CollapsableButton = (props: ICollapsableButtonProps): JSX.Element => {
     const { open, setOpen } = props;    
     const target = useRef(null);
+    const { t } = useTranslation();
 
     const handleOpen = () => {
         setOpen(!open)
@@ -32,7 +34,7 @@ const CollapsableButton = (props: ICollapsableButtonProps): JSX.Element => {
 
     return (
         <TriggerTooltip                         
-            text={open ? 'Hide details' : 'Show details'} 
+            text={open ? `${t('hide')} ${t('details')}` : `${t('show')} ${t('details')}`} 
         >
             {button()}
         </TriggerTooltip>

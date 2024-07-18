@@ -3,6 +3,7 @@ import Flags from 'country-flag-icons/react/3x2'
 import { useTranslation } from "react-i18next";
 import moment from "moment";
 import '../../../public/locales/pt/pt'
+import { Col, Row } from "react-bootstrap";
 
 const LanguageSelector = (): JSX.Element => {
     const { i18n } = useTranslation();
@@ -13,22 +14,24 @@ const LanguageSelector = (): JSX.Element => {
     }
 
     return (
-        <div className='p-2'>
-            <a 
-                className="btn" 
-                role="button" 
-                onClick={() => handleLanguageChange('en')}
-            >
-                <Flags.US style={{width:'2rem', height:'2rem'}} />
-            </a>
-            <a 
-                className="btn" 
-                role="button" 
-                onClick={() => handleLanguageChange('pt')}
-            >
-                <Flags.BR style={{width:'2rem', height:'2rem'}} />
-            </a>
-        </div>
+        <Row>
+            <Col>
+                <a 
+                    className="btn" 
+                    role="button" 
+                    onClick={() => handleLanguageChange('en')}
+                >
+                    <Flags.US style={{width:'2rem', height:'2rem'}} />
+                </a>
+                <a 
+                    className="btn" 
+                    role="button" 
+                    onClick={() => handleLanguageChange('pt')}
+                >
+                    <Flags.BR style={{width:'2rem', height:'2rem'}} />
+                </a>
+            </Col>
+        </Row>
     )
 }
 

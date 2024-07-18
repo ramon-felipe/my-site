@@ -66,5 +66,8 @@
         "years": "year(s)",
         "months": "month(s)",
         "days": "day(s)"
-    }
+    },
+    "download-cv": "Download CV",
+    "hide": "hide",
+    "details": "details"
 }
